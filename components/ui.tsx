@@ -1,0 +1,236 @@
+import Link from "next/link";
+import { ReactNode } from "react";
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  subtitle,
+  center,
+  light,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  center?: boolean;
+  light?: boolean;
+}) {
+  return (
+    <div
+      className={
+        center
+          ? "mx-auto max-w-2xl text-center"
+          : "mx-auto max-w-2xl text-center lg:mx-0 lg:text-left"
+      }
+    >
+      {eyebrow && (
+        <p
+          className={`eyebrow ${center ? "is-center" : "is-center lg:[&::after]:hidden lg:justify-start"}`}
+        >
+          {eyebrow}
+        </p>
+      )}
+      <h2
+        className={`display mt-6 text-[2.4rem] leading-[1.06] sm:text-5xl ${
+          light ? "text-ivory" : "text-ink"
+        }`}
+      >
+        {title}
+      </h2>
+      {subtitle && (
+        <p
+          className={`mt-6 text-lg font-light leading-relaxed ${
+            light ? "text-ivory/70" : "text-ink-soft"
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function SectionDivider({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex items-center justify-center gap-5 ${className}`}>
+      <span className="h-px w-16 bg-gradient-to-r from-transparent to-gold/45 sm:w-28" />
+      <span
+        className="block h-2.5 w-2.5 rotate-45 bg-gradient-to-br from-gold to-champagne"
+        aria-hidden
+      />
+      <span className="h-px w-16 bg-gradient-to-l from-transparent to-gold/45 sm:w-28" />
+    </div>
+  );
+}
+
+export function SectionBand() {
+  return (
+    <div className="surface-dark py-6">
+      <div className="container-site flex items-center justify-center gap-5">
+        <span className="h-px w-20 bg-gradient-to-r from-transparent to-gold/50 sm:w-36" />
+        <span
+          className="block h-2.5 w-2.5 rotate-45 bg-gradient-to-br from-gold to-champagne"
+          aria-hidden
+        />
+        <span className="h-px w-20 bg-gradient-to-l from-transparent to-gold/50 sm:w-36" />
+      </div>
+    </div>
+  );
+}
+
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+}) {
+  return (
+    <section className="surface-dark relative overflow-hidden">
+      <div className="grain absolute inset-0" aria-hidden />
+      <div className="container-site relative pb-20 pt-44 sm:pb-24 sm:pt-52">
+        <p className="eyebrow animate-rise">{eyebrow}</p>
+        <h1 className="display mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-ivory/70 animate-rise">
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export function Panel({
+  children,
+  className = "",
+  dark = false,
+}: {
+  children: ReactNode;
+  className?: string;
+  dark?: boolean;
+}) {
+  return (
+    <div
+      className={`relative border shadow-soft ${
+        dark
+          ? "border-gold/40 bg-gradient-to-b from-navy-deep to-ink-deep"
+          : "border-gold/30 bg-gradient-to-b from-white/90 to-white/75 backdrop-blur-md"
+      } ${className}`}
+    >
+      <span className="absolute -left-px -top-px h-6 w-6 border-l-2 border-t-2 border-gold/70" aria-hidden />
+      <span className="absolute -right-px -top-px h-6 w-6 border-r-2 border-t-2 border-gold/70" aria-hidden />
+      <span className="absolute -bottom-px -left-px h-6 w-6 border-b-2 border-l-2 border-gold/70" aria-hidden />
+      <span className="absolute -bottom-px -right-px h-6 w-6 border-b-2 border-r-2 border-gold/70" aria-hidden />
+      {children}
+    </div>
+  );
+}
+
+export function CTABanner({
+  title,
+  buttonLabel = "Agendar Consulta Particular",
+  subtitle,
+  eyebrow = "Atendimento Particular",
+}: {
+  title: string;
+  buttonLabel?: string;
+  subtitle?: string;
+  eyebrow?: string;
+}) {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-navy-deep to-ink-deep text-ivory">
+      {/* Brilho mauve sutil no topo */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_0%,_rgba(158,107,120,0.28),_transparent_60%)]"
+        aria-hidden
+      />
+      {/* Faixa dourada na divisão (topo) */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center" aria-hidden>
+        <div className="h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gold to-transparent" />
+      </div>
+
+      <div className="container-site relative py-24 sm:py-32">
+        <div className="relative mx-auto max-w-3xl px-8 py-14 text-center sm:px-16 sm:py-16">
+          {/* Cantos dourados */}
+          <span className="absolute -left-px -top-px h-6 w-6 border-l-2 border-t-2 border-gold/60" aria-hidden />
+          <span className="absolute -right-px -top-px h-6 w-6 border-r-2 border-t-2 border-gold/60" aria-hidden />
+          <span className="absolute -bottom-px -left-px h-6 w-6 border-b-2 border-l-2 border-gold/60" aria-hidden />
+          <span className="absolute -bottom-px -right-px h-6 w-6 border-b-2 border-r-2 border-gold/60" aria-hidden />
+
+          <p className="eyebrow is-center justify-center !text-champagne">{eyebrow}</p>
+          <h2 className="display mx-auto mt-6 max-w-2xl text-[2.2rem] leading-[1.1] text-ivory sm:text-[3rem]">
+            {title}
+          </h2>
+          {subtitle && (
+            <p className="mx-auto mt-5 max-w-xl font-light leading-relaxed text-ivory/70">
+              {subtitle}
+            </p>
+          )}
+          <Link href="/contato" className="btn-gold mt-9">
+            {buttonLabel}
+          </Link>
+
+          {/* Selos de confiança */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[0.66rem] uppercase tracking-[0.16em] text-ivory/60">
+            <span>Agendamento online</span>
+            <span className="h-1 w-1 rounded-full bg-champagne" aria-hidden />
+            <span>Confirmação por WhatsApp</span>
+            <span className="h-1 w-1 rounded-full bg-champagne" aria-hidden />
+            <span>Sem fila de espera</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TreatmentCard({
+  title,
+  description,
+  indicado,
+  index,
+  icon,
+  children,
+}: {
+  title: string;
+  description: string;
+  indicado?: string;
+  index?: number;
+  icon?: ReactNode;
+  children?: ReactNode;
+}) {
+  return (
+    <div className="group relative flex h-full flex-col border border-ink/10 bg-ivory p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-soft">
+      {icon ? (
+        <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/[0.07] text-gold transition-colors duration-500 group-hover:bg-gold group-hover:text-ivory">
+          {icon}
+        </span>
+      ) : (
+        typeof index === "number" && (
+          <span className="display text-gradient mb-5 text-3xl">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        )
+      )}
+      <h3 className="display text-2xl leading-snug text-ink">{title}</h3>
+      <div className="mt-4 h-px w-10 bg-gold/50 transition-all duration-500 group-hover:w-16" />
+      <p className="mt-5 text-[0.95rem] font-light leading-relaxed text-ink-soft">
+        {description}
+      </p>
+      {indicado && (
+        <p className="mt-6 border-t border-ink/10 pt-5 text-[0.85rem] font-light leading-relaxed text-ink-soft">
+          <span className="font-medium uppercase tracking-wider text-gold">
+            Indicado para
+          </span>
+          <br />
+          {indicado}
+        </p>
+      )}
+      {children}
+    </div>
+  );
+}
