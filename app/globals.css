@@ -21,8 +21,8 @@ body {
 }
 
 ::selection {
-  background: #9e6b78;
-  color: #fffdea;
+  background: #1e3a5f;
+  color: #fbfaf4;
 }
 
 @layer base {
@@ -80,11 +80,11 @@ body {
       transition-all duration-300 hover:border-navy hover:bg-navy hover:text-ivory;
   }
 
-  /* Botão dourado (CTAs em fundo escuro) */
+  /* Botão navy preenchido (CTAs) — texto branco */
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-full border border-gold bg-gold
-      px-8 py-4 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-navy-deep
-      transition-all duration-300 hover:bg-transparent hover:text-gold-light;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border border-navy bg-navy
+      px-8 py-4 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-ivory
+      shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-navy-dark;
   }
 
   .btn-on-dark {
@@ -109,17 +109,17 @@ body {
   .surface-dark {
     @apply text-ivory;
     background:
-      radial-gradient(1100px 620px at 80% -12%, rgba(158, 107, 120, 0.24), transparent 60%),
-      radial-gradient(900px 600px at 0% 115%, rgba(201, 160, 107, 0.10), transparent 55%),
-      linear-gradient(165deg, #35262D 0%, #2A1F24 48%, #1C151A 100%);
+      radial-gradient(1100px 620px at 80% -12%, rgba(44, 82, 130, 0.32), transparent 60%),
+      radial-gradient(900px 600px at 0% 115%, rgba(222, 197, 143, 0.12), transparent 55%),
+      linear-gradient(165deg, #1f3a5c 0%, #13243b 48%, #0c1726 100%);
   }
 
-  /* Fundo bege clean com brilho mauve sutil (hero) */
+  /* Fundo claro com brilho navy sutil (hero) */
   .hero-light {
     background:
-      radial-gradient(900px 520px at 78% 12%, rgba(158, 107, 120, 0.16), transparent 60%),
-      radial-gradient(800px 600px at 12% 100%, rgba(247, 241, 218, 0.9), transparent 55%),
-      linear-gradient(180deg, #fffdea 0%, #f7f1da 100%);
+      radial-gradient(900px 520px at 78% 12%, rgba(30, 58, 95, 0.14), transparent 60%),
+      radial-gradient(800px 600px at 12% 100%, rgba(244, 240, 232, 0.9), transparent 55%),
+      linear-gradient(180deg, #fbfaf4 0%, #f4f0e8 100%);
   }
 
   /* (removido) textura de pontos nos fundos */
@@ -127,9 +127,9 @@ body {
     display: none;
   }
 
-  /* Texto em degradê mauve → champanhe (rosé-gold) */
+  /* Texto em degradê navy → champanhe */
   .text-gradient {
-    background-image: linear-gradient(105deg, #9e6b78 0%, #c9a06b 100%);
+    background-image: linear-gradient(105deg, #1e3a5f 0%, #dec58f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -138,7 +138,7 @@ body {
   }
   /* Variante mais clara para fundos escuros */
   .text-gradient-light {
-    background-image: linear-gradient(105deg, #b98c97 0%, #dfc196 100%);
+    background-image: linear-gradient(105deg, #5a7ca6 0%, #ecdab6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

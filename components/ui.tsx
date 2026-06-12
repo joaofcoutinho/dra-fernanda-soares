@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -24,7 +25,11 @@ export function SectionHeading({
     >
       {eyebrow && (
         <p
-          className={`eyebrow ${center ? "is-center" : "is-center lg:[&::after]:hidden lg:justify-start"}`}
+          className={`eyebrow ${center ? "is-center" : "is-center lg:[&::after]:hidden lg:justify-start"} ${
+            light
+              ? "!text-ivory [&::after]:!bg-champagne [&::before]:!bg-champagne"
+              : ""
+          }`}
         >
           {eyebrow}
         </p>
@@ -64,14 +69,14 @@ export function SectionDivider({ className = "" }: { className?: string }) {
 
 export function SectionBand() {
   return (
-    <div className="surface-dark py-6">
+    <div className="bg-navy py-6">
       <div className="container-site flex items-center justify-center gap-5">
-        <span className="h-px w-20 bg-gradient-to-r from-transparent to-gold/50 sm:w-36" />
+        <span className="h-px w-20 bg-gradient-to-r from-transparent to-champagne/60 sm:w-36" />
         <span
-          className="block h-2.5 w-2.5 rotate-45 bg-gradient-to-br from-gold to-champagne"
+          className="block h-2.5 w-2.5 rotate-45 bg-champagne"
           aria-hidden
         />
-        <span className="h-px w-20 bg-gradient-to-l from-transparent to-gold/50 sm:w-36" />
+        <span className="h-px w-20 bg-gradient-to-l from-transparent to-champagne/60 sm:w-36" />
       </div>
     </div>
   );
@@ -81,14 +86,35 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  image,
 }: {
   eyebrow: string;
   title: ReactNode;
   subtitle?: ReactNode;
+  image?: string;
 }) {
   return (
     <section className="surface-dark relative overflow-hidden">
-      <div className="grain absolute inset-0" aria-hidden />
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-ink-deep/95 via-ink-deep/85 to-ink-deep/55"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-ink-deep/80 to-transparent"
+            aria-hidden
+          />
+        </>
+      )}
       <div className="container-site relative pb-20 pt-44 sm:pb-24 sm:pt-52">
         <p className="eyebrow animate-rise">{eyebrow}</p>
         <h1 className="display mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl">
@@ -118,13 +144,13 @@ export function Panel({
       className={`relative border shadow-soft ${
         dark
           ? "border-gold/40 bg-gradient-to-b from-navy-deep to-ink-deep"
-          : "border-gold/30 bg-gradient-to-b from-white/90 to-white/75 backdrop-blur-md"
+          : "border-navy/15 bg-gradient-to-br from-ivory via-white to-cream"
       } ${className}`}
     >
-      <span className="absolute -left-px -top-px h-6 w-6 border-l-2 border-t-2 border-gold/70" aria-hidden />
-      <span className="absolute -right-px -top-px h-6 w-6 border-r-2 border-t-2 border-gold/70" aria-hidden />
-      <span className="absolute -bottom-px -left-px h-6 w-6 border-b-2 border-l-2 border-gold/70" aria-hidden />
-      <span className="absolute -bottom-px -right-px h-6 w-6 border-b-2 border-r-2 border-gold/70" aria-hidden />
+      <span className="absolute -left-px -top-px h-6 w-6 border-l-2 border-t-2 border-champagne" aria-hidden />
+      <span className="absolute -right-px -top-px h-6 w-6 border-r-2 border-t-2 border-champagne" aria-hidden />
+      <span className="absolute -bottom-px -left-px h-6 w-6 border-b-2 border-l-2 border-champagne" aria-hidden />
+      <span className="absolute -bottom-px -right-px h-6 w-6 border-b-2 border-r-2 border-champagne" aria-hidden />
       {children}
     </div>
   );
@@ -145,7 +171,7 @@ export function CTABanner({
     <section className="relative overflow-hidden bg-gradient-to-b from-navy-deep to-ink-deep text-ivory">
       {/* Brilho mauve sutil no topo */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_0%,_rgba(158,107,120,0.28),_transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_0%,_rgba(44,82,130,0.30),_transparent_60%)]"
         aria-hidden
       />
       {/* Faixa dourada na divisão (topo) */}

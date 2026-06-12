@@ -5,34 +5,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Base bege clean
-        ivory: "#FFFDEA",
-        cream: "#F7F1DA",
-        sand: "#EDE4C6",
-        // Mauve / violeta — cor de ASSINATURA (botões/CTA, acentos)
-        // tokens mantêm o nome "navy" por compatibilidade
+        // Base clara
+        ivory: "#FBFAF4", // off-white quente (mais próximo do branco)
+        cream: "#F4F0E8", // off-white levemente mais fundo (seções alternadas)
+        sand: "#E6DECA",
+        // Azul naval — cor de ASSINATURA (botões/CTA, acentos)
         navy: {
-          DEFAULT: "#9E6B78", // mauve — botões e acentos
-          dark: "#834F5D", // hover do botão
-          deep: "#2A1F24", // plum-noir — grandes áreas escuras (derivado do mauve)
+          DEFAULT: "#1E3A5F", // navy — botões e acentos
+          dark: "#16304E", // hover do botão
+          deep: "#13243B", // navy escuro — grandes áreas escuras
         },
-        // Texto — plum-noir sofisticado (quase-preto da família mauve)
+        // Texto — navy escuro (quase-preto azulado)
         ink: {
-          DEFAULT: "#2A1F24",
-          soft: "#6F5F66",
-          deep: "#1E161A",
+          DEFAULT: "#13243B",
+          soft: "#566377",
+          deep: "#0C1726",
         },
-        // Acento (antes "gold") — agora mauve
+        // Acento (token "gold") — agora navy
         gold: {
-          DEFAULT: "#9E6B78",
-          light: "#B98C97",
-          pale: "#E3CBD1",
+          DEFAULT: "#1E3A5F",
+          light: "#3A5C82",
+          pale: "#C6D4E2",
         },
-        // Terciária — champanhe / rosé-gold (destaques e degradês)
+        // Terciária — champanhe claro (destaques e degradês) — nova ID
         champagne: {
-          DEFAULT: "#C9A06B",
-          light: "#DFC196",
-          deep: "#A87E4E",
+          DEFAULT: "#DEC58F",
+          light: "#ECDAB6",
+          deep: "#C2A064",
         },
       },
       fontFamily: {
@@ -46,9 +45,9 @@ const config: Config = {
         luxe: "0.18em",
       },
       boxShadow: {
-        soft: "0 2px 8px rgba(94,58,69,0.05), 0 18px 50px -28px rgba(94,58,69,0.28)",
-        lift: "0 6px 18px rgba(94,58,69,0.10), 0 34px 70px -32px rgba(94,58,69,0.42)",
-        badge: "0 10px 30px -10px rgba(94,58,69,0.30)",
+        soft: "0 2px 8px rgba(19,36,59,0.05), 0 18px 50px -28px rgba(19,36,59,0.28)",
+        lift: "0 6px 18px rgba(19,36,59,0.10), 0 34px 70px -32px rgba(19,36,59,0.42)",
+        badge: "0 10px 30px -10px rgba(19,36,59,0.30)",
       },
     },
   },

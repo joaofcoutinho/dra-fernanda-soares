@@ -47,6 +47,7 @@ export default function QuemSomosPage() {
   return (
     <>
       <PageHero
+        image="/hero-quemsomos.jpg"
         eyebrow="Quem Somos"
         title={
           <>
@@ -66,11 +67,12 @@ export default function QuemSomosPage() {
             <div className="absolute -left-4 -top-4 h-full w-full border border-gold/40" aria-hidden />
             <div className="relative aspect-[4/5] overflow-hidden bg-cream shadow-soft">
               <Image
-                src="/dra-fernanda-retrato.jpg"
+                src="/dra-fernanda-hero.jpg"
                 alt="Retrato da Dra. Fernanda Soares"
                 fill
                 priority
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 450px"
+                className="object-cover object-[center_20%]"
               />
             </div>
           </div>
@@ -102,48 +104,59 @@ export default function QuemSomosPage() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Timeline horizontal */}
       <section className="section bg-cream">
-        <div className="container-site grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="container-site">
           <SectionHeading
+            center
             eyebrow="Formação e Credenciais"
-            title={
-              <>
-                Uma linha do tempo
-                <br /> de dedicação
-              </>
-            }
+            title="Uma linha do tempo de dedicação"
           />
-          <div>
-            <ol className="border-l border-ink/15">
+
+          <div className="relative mt-16">
+            {/* Linha horizontal (desktop) */}
+            <div
+              className="absolute inset-x-0 top-1.5 hidden h-px bg-ink/15 lg:block"
+              aria-hidden
+            />
+            <ol className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
               {timeline.map((item) => (
-                <li key={item.title} className="relative pb-10 pl-10 last:pb-0">
-                  <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gold" />
+                <li
+                  key={item.title}
+                  className="relative text-center lg:pt-10 lg:text-left"
+                >
+                  {/* Marcador na linha (desktop) */}
+                  <span
+                    className="absolute left-0 top-0 hidden h-3 w-3 rounded-full bg-gold ring-4 ring-cream lg:block"
+                    aria-hidden
+                  />
                   <p className="text-[0.7rem] font-medium uppercase tracking-luxe text-gold">
                     {item.period}
                   </p>
-                  <h3 className="display mt-2 text-2xl text-ink">{item.title}</h3>
+                  <h3 className="display mt-2 text-lg leading-snug text-ink">
+                    {item.title}
+                  </h3>
                   <p className="mt-1 text-sm font-light text-ink-soft">
                     {item.place}
                   </p>
                 </li>
               ))}
             </ol>
+          </div>
 
-            <div className="mt-12 border border-ink/10 bg-ivory p-9">
-              <h3 className="eyebrow">Títulos e Associações</h3>
-              <ul className="mt-6 space-y-4">
-                {titulos.map((t) => (
-                  <li
-                    key={t}
-                    className="flex items-start gap-4 text-[0.98rem] font-light text-ink-soft"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-gold" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="mx-auto mt-16 max-w-3xl border border-ink/10 bg-ivory p-9">
+            <h3 className="eyebrow">Títulos e Associações</h3>
+            <ul className="mt-6 space-y-4">
+              {titulos.map((t) => (
+                <li
+                  key={t}
+                  className="flex items-start gap-4 text-[0.98rem] font-light text-ink-soft"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-gold" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-navy/10 bg-gradient-to-br from-ivory via-cream to-ivory text-ink">
       {/* Brilhos suaves (iguais à seção de Depoimentos) */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_12%_25%,_rgba(158,107,120,0.10),_transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_12%_25%,_rgba(30,58,95,0.10),_transparent_60%)]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_90%_85%,_rgba(201,160,107,0.12),_transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_90%_85%,_rgba(222,197,143,0.14),_transparent_60%)]"
         aria-hidden
       />
       <div className="container-site relative">

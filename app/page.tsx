@@ -150,7 +150,7 @@ export default function HomePage() {
           <div className="relative mx-auto w-full max-w-[460px] animate-rise [animation-delay:140ms]">
             {/* Halo suave atrás dela */}
             <div
-              className="pointer-events-none absolute inset-x-8 top-6 bottom-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,160,107,0.18),_transparent_70%)] blur-2xl"
+              className="pointer-events-none absolute inset-x-8 top-6 bottom-0 bg-[radial-gradient(ellipse_at_center,_rgba(222,197,143,0.20),_transparent_70%)] blur-2xl"
               aria-hidden
             />
             <Image
@@ -160,7 +160,7 @@ export default function HomePage() {
               height={1200}
               priority
               sizes="(max-width: 1024px) 100vw, 460px"
-              className="relative h-auto w-full object-contain drop-shadow-[0_28px_38px_rgba(94,58,69,0.28)]"
+              className="relative h-auto w-full object-contain drop-shadow-[0_28px_38px_rgba(19,36,59,0.30)]"
             />
             {/* Selo flutuante */}
             <div className="absolute bottom-8 -left-2 flex items-center gap-3 rounded-2xl bg-ivory/95 px-5 py-4 shadow-badge backdrop-blur sm:left-0">
@@ -379,11 +379,11 @@ export default function HomePage() {
       <section className="section relative overflow-hidden bg-gradient-to-br from-ivory via-cream to-ivory">
         {/* Brilhos suaves para profundidade */}
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_12%_25%,_rgba(158,107,120,0.10),_transparent_60%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_12%_25%,_rgba(30,58,95,0.10),_transparent_60%)]"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_90%_85%,_rgba(201,160,107,0.12),_transparent_60%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_90%_85%,_rgba(222,197,143,0.14),_transparent_60%)]"
           aria-hidden
         />
         <div className="container-site relative">
@@ -417,7 +417,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-deep to-ink-deep py-16 text-ivory sm:py-20">
         {/* Brilho mauve sutil */}
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_55%_at_82%_8%,_rgba(158,107,120,0.22),_transparent_60%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_55%_at_82%_8%,_rgba(44,82,130,0.28),_transparent_60%)]"
           aria-hidden
         />
         {/* Faixa dourada na junção (topo) */}
@@ -448,7 +448,7 @@ export default function HomePage() {
                     href="/localizacao"
                     className="group flex items-center gap-4 border-b border-ivory/10 py-5 transition-colors hover:bg-ivory/5"
                   >
-                    <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-gold/40 bg-gold/[0.10] text-gold transition-colors duration-500 group-hover:bg-gold group-hover:text-navy-deep">
+                    <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full border border-ivory/50 bg-ivory/[0.06] text-ivory transition-colors duration-500 group-hover:bg-ivory group-hover:text-navy">
                       <IconPin className="!h-[18px] !w-[18px]" />
                     </span>
                     <div className="flex-1 text-left">
@@ -474,23 +474,21 @@ export default function HomePage() {
           </div>
 
           {/* CTA card */}
-          <Panel dark className="px-8 py-10 text-center sm:px-12">
-            <p className="eyebrow is-center justify-center !text-champagne">
-              Agende Agora
-            </p>
-            <h3 className="display mx-auto mt-4 max-w-sm text-[1.8rem] leading-[1.12] text-ivory sm:text-[2.1rem]">
+          <Panel className="px-8 py-10 text-center sm:px-12">
+            <p className="eyebrow is-center justify-center">Agende Agora</p>
+            <h3 className="display mx-auto mt-4 max-w-sm text-[1.8rem] leading-[1.12] text-ink sm:text-[2.1rem]">
               Consulta particular direto com a Dra. Fernanda
             </h3>
-            <p className="mx-auto mt-4 max-w-sm text-[0.95rem] font-light leading-relaxed text-ivory/70">
+            <p className="mx-auto mt-4 max-w-sm text-[0.95rem] font-light leading-relaxed text-ink-soft">
               Escolha data e horário na agenda online. Sem fila, sem espera.
             </p>
-            <Link href="/contato" className="btn-gold mt-7 !text-ivory">
+            <Link href="/contato" className="btn-gold mt-7">
               <IconCalendar />
               Agendar Consulta Particular
             </Link>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[0.62rem] uppercase tracking-[0.16em] text-ivory/55">
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[0.62rem] uppercase tracking-[0.16em] text-ink-soft">
               <span>Agendamento online</span>
-              <span className="h-1 w-1 rounded-full bg-champagne" aria-hidden />
+              <span className="h-1 w-1 rounded-full bg-navy" aria-hidden />
               <span>Confirmação por WhatsApp</span>
             </div>
           </Panel>
@@ -541,8 +539,8 @@ function Stars() {
       <svg width="0" height="0" className="absolute" aria-hidden>
         <defs>
           <linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#9e6b78" />
-            <stop offset="100%" stopColor="#c9a06b" />
+            <stop offset="0%" stopColor="#1e3a5f" />
+            <stop offset="100%" stopColor="#dec58f" />
           </linearGradient>
         </defs>
       </svg>
