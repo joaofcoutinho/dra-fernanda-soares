@@ -75,12 +75,12 @@ const bandStats = [
 
 export function SectionBand() {
   return (
-    <div className="bg-navy py-12 sm:py-14">
-      <div className="container-site">
+    <div className="surface-dark relative overflow-hidden py-12 sm:py-14">
+      <div className="container-site relative">
         <dl className="grid grid-cols-3 gap-2 divide-x divide-ivory/10 text-center sm:gap-6">
           {bandStats.map((s) => (
             <div key={s.label} className="px-2 sm:px-4">
-              <dt className="display bg-gradient-to-br from-champagne-light via-champagne to-champagne-deep bg-clip-text text-3xl leading-none text-transparent sm:text-5xl">
+              <dt className="display text-gradient-light text-3xl leading-none sm:text-5xl">
                 {s.value}
               </dt>
               <dd className="mx-auto mt-2.5 max-w-[12rem] text-[0.6rem] font-medium uppercase leading-relaxed tracking-[0.12em] text-ivory/70 sm:mt-3 sm:text-[0.72rem] sm:tracking-luxe">
