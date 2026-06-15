@@ -12,24 +12,28 @@ export const metadata: Metadata = {
 
 const faq = [
   {
-    q: "A consulta é somente particular?",
-    a: `Sim. O atendimento da Dra. Fernanda pelo site é exclusivamente particular, permitindo tempo adequado para diagnóstico completo, tricoscopia e montagem do protocolo individual. O valor da consulta é ${site.consultaValor}.`,
+    q: "Quais são as principais especialidades da Dra. Fernanda?",
+    a: "A Dra. Fernanda é dermatologista e tricologista. Entre os serviços oferecidos estão: consulta de dermatologia e de tricologia, microagulhamento, aplicação de toxina botulínica, peeling químico, preenchimento facial e cutâneo, além de teleconsulta.",
   },
   {
-    q: "Posso agendar para qualquer dia?",
-    a: "A Dra. Fernanda disponibiliza horários específicos para consultas particulares, geralmente sextas-feiras pela manhã. As vagas são atualizadas em tempo real no sistema de agendamento online.",
+    q: "Onde fica o consultório da Dra. Fernanda?",
+    a: "O atendimento presencial acontece em três clínicas de referência em Salvador: Cliderme (Itaigara), Dermato+ (Pituba) e Santtare (Pituba). Você também pode optar pela teleconsulta. Consulte a página de Localização para endereços completos.",
   },
   {
-    q: "O que devo levar para a primeira consulta?",
-    a: "Se tiver, leve exames recentes (hemograma, dosagem hormonal, ferritina), histórico de tratamentos capilares anteriores e qualquer medicamento em uso. Fotos do progresso da queda, se disponíveis, também ajudam no diagnóstico.",
+    q: "Posso me consultar online, sem ir até o consultório?",
+    a: 'Sim. A Dra. Fernanda oferece atendimento online. Basta selecionar "Teleconsulta" ao agendar e você verá as datas e horários disponíveis.',
   },
   {
-    q: "É possível realizar o transplante na mesma consulta?",
-    a: "Não. O transplante capilar exige consulta de avaliação prévia, planejamento da área receptora e preparação do paciente. A consulta de avaliação é o primeiro passo obrigatório.",
+    q: "Quais métodos de pagamento são aceitos?",
+    a: "São aceitos Cartão de Crédito, Cartão de Débito, Transferência Bancária e PIX.",
   },
   {
-    q: "Qual a diferença entre a consulta particular e o atendimento convênio?",
-    a: "No atendimento particular, a consulta tem duração e profundidade maiores, com avaliação tricoscópica completa e montagem de protocolo detalhado. O agendamento online é direto com a Dra. Fernanda.",
+    q: "Em quais idiomas a Dra. Fernanda atende?",
+    a: "A Dra. Fernanda atende em Português, Inglês e Espanhol.",
+  },
+  {
+    q: "Como marco uma consulta?",
+    a: "Direto aqui pelo site. O calendário de agendamento é atualizado em tempo real: basta escolher o dia e o horário mais convenientes e confirmar. O agendamento é gratuito e você recebe um lembrete antes da consulta. Costumam haver horários na mesma semana ou na semana seguinte.",
   },
 ];
 

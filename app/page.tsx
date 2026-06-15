@@ -67,45 +67,21 @@ const diferenciais = [
 const depoimentos = [
   {
     quote:
-      "Após meses procurando um especialista de confiança em Salvador, encontrei a Dra. Fernanda. O diagnóstico foi preciso, o tratamento funcionou e o atendimento foi impecável do início ao fim.",
-    name: "M. Oliveira",
-    treatment: "Tratamento para Alopecia",
+      "Excelente atendimento, muito segura e demonstra muito conhecimento. Recomendo demais!",
+    name: "Otávio Barreira",
+    treatment: "Consulta · Clínica Santtare",
   },
   {
     quote:
-      "Fiz o transplante capilar com a Dra. Fernanda e o resultado superou minhas expectativas. Cuidado e profissionalismo em cada etapa, do planejamento ao pós-operatório.",
-    name: "R. Santos",
-    treatment: "Transplante Capilar",
+      "Dermatologista excelente, atualizada e atenciosa. Me acompanha há mais de 10 anos. Não troco!",
+    name: "Paloma Coelho",
+    treatment: "Paciente há mais de 10 anos",
   },
   {
     quote:
-      "Finalmente uma dermatologista que explica tudo com calma e indica só o necessário. Saí da consulta segura e com um plano claro para a minha pele.",
-    name: "C. Almeida",
+      "A Dra. é atenciosa, simpática, paciente e me ouviu com atenção, características raras no meio médico hoje em dia. Explicou meu tratamento de forma clara e completa, e foi a primeira dermatologista que conseguiu, de fato, resolver meu problema. Indico demais!",
+    name: "J.G.",
     treatment: "Consulta Dermatológica",
-  },
-  {
-    quote:
-      "Sofria com queda de cabelo há anos e nenhum tratamento resolvia. A Dra. Fernanda investigou a causa de verdade e em poucos meses a diferença já era visível.",
-    name: "P. Carvalho",
-    treatment: "Mesoterapia Capilar",
-  },
-  {
-    quote:
-      "Atenciosa, técnica e honesta. Não empurra procedimento, indica o que realmente faz sentido. Resultado natural e um acompanhamento que faz toda a diferença.",
-    name: "J. Ribeiro",
-    treatment: "Bioestimulador de Colágeno",
-  },
-  {
-    quote:
-      "Profissional excepcional. Me senti acolhida desde a primeira consulta e o resultado do meu tratamento capilar foi exatamente o que eu esperava. Recomendo de olhos fechados.",
-    name: "A. Menezes",
-    treatment: "MMP Capilar",
-  },
-  {
-    quote:
-      "Consultório impecável e um atendimento que respeita o tempo do paciente. A Dra. Fernanda é referência em Salvador, e agora entendo o porquê.",
-    name: "L. Ferreira",
-    treatment: "Toxina Botulínica",
   },
 ];
 
