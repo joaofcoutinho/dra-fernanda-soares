@@ -124,19 +124,21 @@ export function PageHero({
             : ""
         }`}
       >
-        <div>
-          <p className="eyebrow animate-rise">{eyebrow}</p>
-          <h1 className="display mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl">
+        <div className="text-center lg:text-left">
+          <p className="eyebrow animate-rise justify-center lg:justify-start">
+            {eyebrow}
+          </p>
+          <h1 className="display mx-auto mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl lg:mx-0">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-ivory/70 animate-rise">
+            <p className="mx-auto mt-7 max-w-xl text-lg font-light leading-relaxed text-ivory/70 animate-rise lg:mx-0">
               {subtitle}
             </p>
           )}
         </div>
         {aside && (
-          <div className="mt-12 animate-rise [animation-delay:140ms] lg:mt-0">
+          <div className="mt-12 hidden animate-rise [animation-delay:140ms] lg:mt-0 lg:block">
             {aside}
           </div>
         )}

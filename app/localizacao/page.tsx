@@ -111,7 +111,7 @@ export default function LocalizacaoPage() {
                 </li>
               ))}
             </ol>
-            <p className="mt-8 display text-2xl leading-snug text-ink">
+            <p className="mt-8 display text-2xl leading-snug text-ink text-center lg:text-left">
               Sem fila de espera. Sem intermediário.
               <span className="text-gradient"> Direto com a especialista.</span>
             </p>

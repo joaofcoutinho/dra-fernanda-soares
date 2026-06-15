@@ -53,14 +53,16 @@ export default function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`relative text-[0.72rem] font-medium uppercase tracking-[0.14em] transition-colors ${
+                className={`group relative text-[0.72rem] font-medium uppercase tracking-[0.14em] transition-colors ${
                   active ? "text-ivory" : "text-ivory/70 hover:text-ivory"
                 }`}
               >
                 {l.label}
-                {active && (
-                  <span className="absolute -bottom-2 left-0 h-px w-full bg-gold" />
-                )}
+                <span
+                  className={`absolute -bottom-2 left-0 h-px bg-champagne transition-all duration-300 ${
+                    active ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             );
           })}

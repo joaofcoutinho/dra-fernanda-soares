@@ -20,17 +20,17 @@ export default function Footer() {
         aria-hidden
       />
       <div className="container-site relative">
-        <div className="grid gap-12 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 py-16 text-center sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12 lg:py-20 lg:text-left">
           {/* Marca */}
-          <div>
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Image
               src="/logo-navy.png"
               alt="Dra. Fernanda Soares, Dermatologia e Tricologia"
               width={358}
               height={170}
-              className="h-24 w-auto sm:h-28"
+              className="mx-auto h-24 w-auto sm:h-28 lg:mx-0"
             />
-            <p className="mt-6 max-w-xs text-sm font-light leading-relaxed text-ink-soft">
+            <p className="mx-auto mt-6 max-w-xs text-sm font-light leading-relaxed text-ink-soft lg:mx-0">
               Medicina de precisão para a saúde da pele e do cabelo. Atendimento
               particular exclusivo em {site.city}.
             </p>
@@ -46,7 +46,7 @@ export default function Footer() {
             ))}
           </FooterCol>
 
-          <FooterCol title="Atendimento">
+          <FooterCol title="Atendimento" className="hidden lg:block">
             {clinicas.map((c) => (
               <li key={c.nome}>{c.nome}</li>
             ))}
@@ -100,12 +100,14 @@ export default function Footer() {
 function FooterCol({
   title,
   children,
+  className,
 }: {
   title: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <div>
+    <div className={className}>
       <h3 className="text-[0.68rem] font-medium uppercase tracking-luxe text-gold">
         {title}
       </h3>

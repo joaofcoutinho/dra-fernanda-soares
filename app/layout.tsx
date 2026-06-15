@@ -3,6 +3,7 @@ import { Jost } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
@@ -65,6 +66,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <WhatsAppFloat />
         <StructuredData />
       </body>
     </html>

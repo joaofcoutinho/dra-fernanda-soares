@@ -66,7 +66,7 @@ export default function TratamentosCapilaresPage() {
       {/* Intro */}
       <section className="section">
         <div className="container-site grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHeading eyebrow="A Abordagem" title="Causa raiz, antes do protocolo" />
+          <SectionHeading center eyebrow="A Abordagem" title="Causa raiz, antes do protocolo" />
           <div className="space-y-5 text-[1.05rem] font-light leading-relaxed text-ink-soft lg:pt-4">
             <p>
               A perda de cabelo afeta mais de 42 milhões de brasileiros e, em
@@ -89,8 +89,8 @@ export default function TratamentosCapilaresPage() {
       <section className="surface-dark relative overflow-hidden">
         <div className="grain absolute inset-0" aria-hidden />
         <div className="container-site relative section grid gap-14 lg:grid-cols-2">
-          <div>
-            <p className="eyebrow">Procedimento Principal</p>
+          <div className="text-center lg:text-left">
+            <p className="eyebrow justify-center lg:justify-start">Procedimento Principal</p>
             <h2 className="display mt-6 text-4xl leading-tight text-ivory sm:text-5xl">
               Transplante Capilar
               <span className="mt-1 block text-gradient-light">

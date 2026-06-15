@@ -344,7 +344,7 @@ export default function HomePage() {
             subtitle="Precisão no diagnóstico, formação certificada e um cuidado que respeita o seu tempo, em cada consulta."
           />
           <Reveal stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {diferenciais.map((d, i) => (
+            {diferenciais.map((d) => (
               <article
                 key={d.title}
                 className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden sm:min-h-[420px]"
@@ -364,10 +364,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 ring-1 ring-inset ring-ivory/10" aria-hidden />
                 {/* Conteúdo */}
                 <div className="relative p-8">
-                  <span className="display text-gradient-light text-3xl">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="mt-4 h-px w-10 bg-gold/60 transition-all duration-500 group-hover:w-16" />
+                  <div className="h-px w-10 bg-gold/60 transition-all duration-500 group-hover:w-16" />
                   <h3 className="display mt-5 text-2xl leading-snug text-ivory">
                     {d.title}
                   </h3>

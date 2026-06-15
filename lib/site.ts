@@ -9,7 +9,7 @@ export const site = {
   consultaValor: "R$ 450",
 
   // Links — substituir pelos reais quando disponíveis
-  whatsapp: "https://wa.me/5571000000000", // ATUALIZAR número
+  whatsapp: "https://wa.me/557197100512", // Conta comercial: +55 71 9710-0512
   calendly: "#agendar", // ATUALIZAR com link do Calendly
   email: "mailto:contato@drafernandasoares.com.br", // ATUALIZAR
   instagram: "https://www.instagram.com/drafernandasoaresdermato",

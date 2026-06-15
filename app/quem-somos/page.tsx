@@ -113,21 +113,26 @@ export default function QuemSomosPage() {
             title="Uma linha do tempo de dedicação"
           />
 
-          <div className="relative mt-16">
-            {/* Linha horizontal (desktop) */}
+          <div className="relative mx-auto mt-12 max-w-md lg:mt-16 lg:max-w-none">
+            {/* Trilho horizontal (desktop) */}
             <div
               className="absolute inset-x-0 top-1.5 hidden h-px bg-ink/15 lg:block"
               aria-hidden
             />
-            <ol className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            {/* Trilho vertical (mobile/tablet) */}
+            <div
+              className="absolute bottom-3 left-[5px] top-2 w-px bg-ink/15 lg:hidden"
+              aria-hidden
+            />
+            <ol className="grid gap-y-9 lg:grid-cols-5 lg:gap-x-8 lg:gap-y-12">
               {timeline.map((item) => (
                 <li
                   key={item.title}
-                  className="relative text-center lg:pt-10 lg:text-left"
+                  className="relative pl-9 text-left lg:pl-0 lg:pt-10"
                 >
-                  {/* Marcador na linha (desktop) */}
+                  {/* Marcador */}
                   <span
-                    className="absolute left-0 top-0 hidden h-3 w-3 rounded-full bg-gold ring-4 ring-cream lg:block"
+                    className="absolute left-0 top-1 h-[11px] w-[11px] rounded-full bg-gold ring-4 ring-cream lg:top-0 lg:h-3 lg:w-3"
                     aria-hidden
                   />
                   <p className="text-[0.7rem] font-medium uppercase tracking-luxe text-gold">
