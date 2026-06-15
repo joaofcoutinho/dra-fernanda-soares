@@ -77,13 +77,13 @@ export function SectionBand() {
   return (
     <div className="bg-navy py-12 sm:py-14">
       <div className="container-site">
-        <dl className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:gap-6 sm:divide-x sm:divide-ivory/10">
+        <dl className="grid grid-cols-3 gap-2 divide-x divide-ivory/10 text-center sm:gap-6">
           {bandStats.map((s) => (
-            <div key={s.label} className="px-4">
-              <dt className="display bg-gradient-to-br from-champagne-light via-champagne to-champagne-deep bg-clip-text text-4xl leading-none text-transparent sm:text-5xl">
+            <div key={s.label} className="px-2 sm:px-4">
+              <dt className="display bg-gradient-to-br from-champagne-light via-champagne to-champagne-deep bg-clip-text text-3xl leading-none text-transparent sm:text-5xl">
                 {s.value}
               </dt>
-              <dd className="mx-auto mt-3 max-w-[12rem] text-[0.72rem] font-medium uppercase leading-relaxed tracking-luxe text-ivory/70">
+              <dd className="mx-auto mt-2.5 max-w-[12rem] text-[0.6rem] font-medium uppercase leading-relaxed tracking-[0.12em] text-ivory/70 sm:mt-3 sm:text-[0.72rem] sm:tracking-luxe">
                 {s.label}
               </dd>
             </div>
