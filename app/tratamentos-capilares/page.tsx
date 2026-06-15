@@ -4,7 +4,7 @@ import { PageHero, SectionHeading, TreatmentCard } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Tratamentos Capilares em Salvador | Dra. Fernanda Soares — Tricologista",
+  title: "Tratamentos Capilares em Salvador | Dra. Fernanda Soares | Tricologista",
   description:
     "Transplante capilar, MMP, mesoterapia e microenxerto autólogo em Salvador. Especialista em tricologia com diagnóstico individualizado. CRM BA 44447.",
 };
@@ -79,7 +79,7 @@ export default function TratamentosCapilaresPage() {
               Cada tratamento começa com avaliação completa: anamnese, tricoscopia
               (exame visual do couro cabeludo com equipamento de alta definição) e
               diagnóstico diferencial. O protocolo é montado para aquele paciente
-              específico — não existe fórmula genérica.
+              específico. Não existe fórmula genérica.
             </p>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default function TratamentosCapilaresPage() {
               <p>
                 Utiliza a Técnica <strong className="font-medium text-ivory">FUE</strong>{" "}
                 (Follicular Unit Extraction): extração individual dos folículos da
-                área doadora para implantação nas áreas com falhas ou calvícies —
-                resultados naturais e sem cicatriz linear.
+                área doadora para implantação nas áreas com falhas ou calvícies,
+                com resultados naturais e sem cicatriz linear.
               </p>
               <p>
                 É atualmente a técnica mais utilizada, com recuperação mais rápida
@@ -201,7 +201,7 @@ export default function TratamentosCapilaresPage() {
               Por onde começo?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl font-light leading-relaxed text-ivory/70">
-              Pela consulta. Sem avaliação, não existe protocolo correto — e sem
+              Pela consulta. Sem avaliação, não existe protocolo correto, e sem
               protocolo correto, qualquer tratamento é tentativa. A Dra. Fernanda
               investiga a causa raiz da sua queda antes de propor qualquer
               intervenção. É isso que diferencia um resultado consistente de um

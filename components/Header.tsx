@@ -35,7 +35,7 @@ export default function Header() {
         <Link href="/" className="justify-self-start">
           <Image
             src="/logo-white.png"
-            alt="Dra. Fernanda Soares — Dermatologia e Tricologia"
+            alt="Dra. Fernanda Soares, Dermatologia e Tricologia"
             width={358}
             height={170}
             priority

@@ -34,7 +34,7 @@ const procedimentos = [
   {
     title: "Peeling Químico",
     description:
-      "Promove descamação controlada da pele, estimulando renovação celular e produção de colágeno. A profundidade — superficial, médio ou profundo — é definida conforme o objetivo e o tipo de pele de cada paciente.",
+      "Promove descamação controlada da pele, estimulando renovação celular e produção de colágeno. A profundidade (superficial, médio ou profundo) é definida conforme o objetivo e o tipo de pele de cada paciente.",
     indicado:
       "Manchas (melasma, hiperpigmentações), acne e cicatrizes, envelhecimento cutâneo, textura irregular, oleosidade.",
   },
@@ -75,7 +75,8 @@ export default function TratamentosDermatologicosPage() {
             </p>
             <p className="display text-2xl leading-snug text-ink">
               Nenhum procedimento é realizado sem avaliação. O objetivo nunca é
-              uma aparência artificial — é potencializar o que cada pessoa já tem.
+              uma aparência artificial, e sim potencializar o que cada pessoa já
+              tem.
             </p>
           </div>
         </div>

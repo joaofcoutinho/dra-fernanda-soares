@@ -2,23 +2,27 @@ import type { Metadata } from "next";
 import { clinicas } from "@/lib/site";
 import { CTABanner, PageHero, SectionHeading } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { IconPhone } from "@/components/icons";
+
+const telHref = (phone: string) => `tel:+55${phone.replace(/\D/g, "")}`;
 
 export const metadata: Metadata = {
   title: "Onde Atende a Dra. Fernanda Soares | Dermatologista Salvador",
   description:
-    "Dra. Fernanda Soares atende em 3 clínicas em Salvador: Cliderme, Dermatomais e Santtare. Consulta particular com agendamento online.",
+    "Dra. Fernanda Soares atende em 3 clínicas em Salvador: Cliderme, Dermato+ e Santtare. Consulta particular com agendamento online.",
 };
 
 const passos = [
   "Escolher a clínica de preferência",
   "Acessar o calendário online e escolher data e horário disponível",
-  "Confirmar o agendamento — você receberá confirmação por e-mail e WhatsApp",
+  "Confirmar o agendamento e receber a confirmação por e-mail e WhatsApp",
 ];
 
 export default function LocalizacaoPage() {
   return (
     <>
       <PageHero
+        image="/hero-localizacao.jpg"
         eyebrow="Localização"
         title={
           <>
@@ -31,7 +35,7 @@ export default function LocalizacaoPage() {
 
       <section className="section">
         <Reveal stagger className="container-site grid gap-10 lg:grid-cols-3">
-          {clinicas.map((c, i) => (
+          {clinicas.map((c) => (
             <article
               key={c.nome}
               className="flex flex-col border border-ink/10 bg-ivory transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-soft"
@@ -52,16 +56,35 @@ export default function LocalizacaoPage() {
                 )}
               </div>
               <div className="flex flex-1 flex-col p-9">
-                <span className="display text-2xl text-gold/50">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h2 className="display mt-2 text-3xl text-ink">{c.nome}</h2>
-                <dl className="mt-7 space-y-4 text-sm font-light text-ink-soft">
+                <h2 className="display text-3xl text-ink">{c.nome}</h2>
+
+                {/* Avaliação Google */}
+                <div className="mt-2 flex items-center gap-2 text-sm">
+                  <span className="inline-flex gap-0.5 text-champagne" aria-hidden>
+                    ★★★★★
+                  </span>
+                  <span className="font-medium text-ink">{c.rating}</span>
+                  <span className="text-xs text-ink-soft">
+                    · {c.reviews} avaliações no Google
+                  </span>
+                </div>
+
+                <dl className="mt-6 space-y-4 text-sm font-light text-ink-soft">
                   <Row label="Endereço" value={c.endereco} />
                   <Row label="Telefone" value={c.telefone} />
-                  <Row label="WhatsApp" value={c.whatsapp} />
                   <Row label="Horários" value={c.horarios} />
                 </dl>
+
+                {/* Ligar */}
+                <div className="mt-auto pt-7">
+                  <a
+                    href={telHref(c.telefone)}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-[0.72rem] font-medium uppercase tracking-[0.14em] text-ivory transition-colors hover:bg-navy-dark"
+                  >
+                    <IconPhone className="!h-4 !w-4" />
+                    Ligar para a clínica
+                  </a>
+                </div>
               </div>
             </article>
           ))}

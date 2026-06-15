@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import { IconCalendar, IconMail, IconWhatsApp } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Agendar Consulta | Dra. Fernanda Soares — Dermatologista Salvador",
+  title: "Agendar Consulta | Dra. Fernanda Soares | Dermatologista Salvador",
   description:
     "Agende sua consulta particular com a Dra. Fernanda Soares, tricologista e dermatologista em Salvador. Agendamento online disponível. CRM BA 44447.",
 };
@@ -17,7 +17,7 @@ const faq = [
   },
   {
     q: "Posso agendar para qualquer dia?",
-    a: "A Dra. Fernanda disponibiliza horários específicos para consultas particulares — geralmente sextas-feiras pela manhã. As vagas são atualizadas em tempo real no sistema de agendamento online.",
+    a: "A Dra. Fernanda disponibiliza horários específicos para consultas particulares, geralmente sextas-feiras pela manhã. As vagas são atualizadas em tempo real no sistema de agendamento online.",
   },
   {
     q: "O que devo levar para a primeira consulta?",
@@ -61,6 +61,7 @@ export default function ContatoPage() {
   return (
     <>
       <PageHero
+        image="/hero-contato.jpg"
         eyebrow="Contato & Agendamento"
         title={
           <>
@@ -80,8 +81,8 @@ export default function ContatoPage() {
               Widget de Agendamento
             </h2>
             <p className="mx-auto mt-5 max-w-lg font-light leading-relaxed text-ink-soft">
-              Espaço reservado para o widget do Calendly — evento “Consulta
-              Particular — Dra. Fernanda Soares”, duração 60 min, sextas-feiras
+              Espaço reservado para o widget do Calendly. Evento “Consulta
+              Particular, Dra. Fernanda Soares”, duração 60 min, sextas-feiras
               pela manhã, sincronizado com o Google Calendar.
             </p>
             <a href={site.calendly} className="btn-primary mt-9">
@@ -97,11 +98,12 @@ export default function ContatoPage() {
 
       {/* Alternativas de contato */}
       <section className="section pt-0">
-        <Reveal
-          stagger
-          className="container-site grid gap-px border border-ink/10 bg-ink/10 sm:grid-cols-3"
-        >
-          {cards.map((c) => (
+        <div className="container-site">
+          <Reveal
+            stagger
+            className="grid gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-3"
+          >
+            {cards.map((c) => (
             <a
               key={c.title}
               href={c.href}
@@ -119,25 +121,29 @@ export default function ContatoPage() {
               </span>
             </a>
           ))}
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* FAQ */}
-      <section className="section bg-cream pt-0">
+      <section className="section bg-cream">
         <div className="container-site max-w-3xl">
           <SectionHeading center eyebrow="Dúvidas Frequentes" title="Perguntas frequentes" />
-          <div className="mt-14 border-t border-ink/10">
+          <div className="mt-14 space-y-4">
             {faq.map((item) => (
-              <details key={item.q} className="group border-b border-ink/10 py-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6">
-                  <span className="display text-xl text-ink sm:text-2xl">
+              <details
+                key={item.q}
+                className="group border border-ink/10 bg-ivory transition-all duration-300 open:border-navy/30 open:shadow-soft hover:border-navy/30"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-6 sm:p-7">
+                  <span className="display text-lg leading-snug text-ink sm:text-xl">
                     {item.q}
                   </span>
-                  <span className="text-2xl font-light text-gold transition-transform duration-300 group-open:rotate-45">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full border border-navy/30 text-lg font-light text-navy transition-all duration-300 group-open:rotate-45 group-open:border-navy group-open:bg-navy group-open:text-ivory">
                     +
                   </span>
                 </summary>
-                <p className="mt-4 max-w-2xl font-light leading-relaxed text-ink-soft">
+                <p className="-mt-1 max-w-2xl px-6 pb-6 font-light leading-relaxed text-ink-soft sm:px-7 sm:pb-7">
                   {item.a}
                 </p>
               </details>

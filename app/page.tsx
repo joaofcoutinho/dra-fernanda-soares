@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { clinicas, site } from "@/lib/site";
-import { Panel, SectionBand, SectionHeading } from "@/components/ui";
+import { SectionBand, SectionHeading } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import { IconCalendar, IconPin } from "@/components/icons";
 
@@ -87,7 +87,7 @@ const depoimentos = [
 
 const credenciais = [
   `${site.crm} · ${site.rqe}`,
-  "Título de Especialista — SBD",
+  "Título de Especialista pela SBD",
   "+20 anos de experiência",
   "Membro Efetivo da Sociedade Brasileira de Dermatologia",
   "Tricologia Médica & Transplante Capilar FUE",
@@ -125,7 +125,7 @@ export default function HomePage() {
         <div className="container-site relative grid items-end gap-6 pt-28 sm:pt-32 lg:gap-16 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="animate-rise pb-2 text-center lg:pb-28 lg:text-left">
             <p className="eyebrow is-center lg:[&::after]:hidden lg:justify-start">
-              Dermatologia &amp; Tricologia — {site.city}
+              Dermatologia &amp; Tricologia · {site.city}
             </p>
             <h1 className="display mt-7 text-[2.6rem] leading-[1.04] text-ink sm:text-6xl lg:text-[4.6rem]">
               Especialista em{" "}
@@ -133,15 +133,21 @@ export default function HomePage() {
             </h1>
             <p className="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-ink-soft lg:mx-0">
               Dermatologista e Tricologista, especialista em Transplante Capilar.
-              Atendimento particular exclusivo em Salvador — Cliderme,
-              Dermatomais e Santtare.
+              Atendimento particular exclusivo em Salvador, nas clínicas
+              Cliderme, Dermato+ e Santtare.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:items-start lg:justify-start">
-              <Link href="/contato" className="btn-primary">
+              <Link href="/contato" className="btn-primary group !gap-0">
                 Agendar Minha Consulta
+                <span className="ml-0 w-0 overflow-hidden text-base leading-none opacity-0 transition-all duration-300 group-hover:ml-2.5 group-hover:w-4 group-hover:opacity-100">
+                  →
+                </span>
               </Link>
-              <Link href="#tratamentos" className="btn-outline">
+              <Link href="#tratamentos" className="btn-outline group !gap-0">
                 Conheça os tratamentos
+                <span className="ml-0 w-0 overflow-hidden text-base leading-none opacity-0 transition-all duration-300 group-hover:ml-2.5 group-hover:w-4 group-hover:opacity-100">
+                  →
+                </span>
               </Link>
             </div>
           </div>
@@ -211,7 +217,7 @@ export default function HomePage() {
                 <br /> onde começar?
               </>
             }
-            subtitle="Você não precisa conviver com isso. Existe tratamento eficaz — feito por quem realmente entende do assunto."
+            subtitle="Você não precisa conviver com isso. Existe tratamento eficaz, feito por quem realmente entende do assunto."
           />
           <Reveal stagger className="divide-y divide-ivory/10 border-y border-ivory/10">
             {dores.map((d, i) => (
@@ -308,7 +314,7 @@ export default function HomePage() {
               <p>
                 Depois de 10 anos à frente de seu próprio consultório em
                 Vitória-ES, chegou a Salvador em 2024 para oferecer o mesmo nível
-                de excelência clínica — agora em três das melhores clínicas da
+                de excelência clínica, agora em três das melhores clínicas da
                 cidade.
               </p>
             </div>
@@ -335,7 +341,7 @@ export default function HomePage() {
                 <span className="whitespace-nowrap">Dra. Fernanda</span>
               </>
             }
-            subtitle="Precisão no diagnóstico, formação certificada e um cuidado que respeita o seu tempo — em cada consulta."
+            subtitle="Precisão no diagnóstico, formação certificada e um cuidado que respeita o seu tempo, em cada consulta."
           />
           <Reveal stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {diferenciais.map((d, i) => (
@@ -439,9 +445,6 @@ export default function HomePage() {
 
             <Reveal stagger className="mt-8 border-t border-ivory/15">
               {clinicas.map((c) => {
-                const temEndereco = !c.endereco
-                  .toLowerCase()
-                  .includes("confirmar");
                 return (
                   <Link
                     key={c.nome}
@@ -454,7 +457,7 @@ export default function HomePage() {
                     <div className="flex-1 text-left">
                       <h3 className="display text-xl text-ivory">{c.nome}</h3>
                       <p className="mt-0.5 text-[0.7rem] font-medium uppercase tracking-luxe text-ivory/55">
-                        {temEndereco ? c.endereco : c.cidade}
+                        {c.cidade}
                       </p>
                     </div>
                     <span className="translate-x-0 text-gold opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
@@ -473,25 +476,27 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* CTA card */}
-          <Panel className="px-8 py-10 text-center sm:px-12">
-            <p className="eyebrow is-center justify-center">Agende Agora</p>
-            <h3 className="display mx-auto mt-4 max-w-sm text-[1.8rem] leading-[1.12] text-ink sm:text-[2.1rem]">
+          {/* CTA card (estilo caixa com borda sobre o navy) */}
+          <div className="relative border border-ivory/15 bg-ivory/[0.03] px-8 py-12 text-center sm:px-12 sm:py-14">
+            <p className="eyebrow is-center justify-center !text-ivory [&::after]:!bg-champagne [&::before]:!bg-champagne">
+              Agende Agora
+            </p>
+            <h3 className="display mx-auto mt-4 max-w-sm text-[1.8rem] leading-[1.12] text-ivory sm:text-[2.1rem]">
               Consulta particular direto com a Dra. Fernanda
             </h3>
-            <p className="mx-auto mt-4 max-w-sm text-[0.95rem] font-light leading-relaxed text-ink-soft">
+            <p className="mx-auto mt-4 max-w-sm text-[0.95rem] font-light leading-relaxed text-ivory/70">
               Escolha data e horário na agenda online. Sem fila, sem espera.
             </p>
             <Link href="/contato" className="btn-gold mt-7">
               <IconCalendar />
               Agendar Consulta Particular
             </Link>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[0.62rem] uppercase tracking-[0.16em] text-ink-soft">
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[0.62rem] uppercase tracking-[0.16em] text-ivory/60">
               <span>Agendamento online</span>
-              <span className="h-1 w-1 rounded-full bg-navy" aria-hidden />
+              <span className="h-1 w-1 rounded-full bg-champagne" aria-hidden />
               <span>Confirmação por WhatsApp</span>
             </div>
-          </Panel>
+          </div>
         </div>
       </section>
     </>

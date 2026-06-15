@@ -6,22 +6,22 @@ import { CTABanner, PageHero, SectionHeading } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Sobre a Dra. Fernanda Soares | Dermatologista e Tricologista em Salvador",
   description:
-    "Conheça a trajetória da Dra. Fernanda Soares — 20 anos de experiência em dermatologia e tricologia. Especialista em transplante capilar. CRM BA 44447.",
+    "Conheça a trajetória da Dra. Fernanda Soares, com 20 anos de experiência em dermatologia e tricologia. Especialista em transplante capilar. CRM BA 44447.",
 };
 
 const timeline = [
   {
-    period: "1999 — 2005",
+    period: "1999 a 2005",
     title: "Graduação em Medicina",
     place: "Universidade Gama Filho, Rio de Janeiro, RJ",
   },
   {
-    period: "2007 — 2009",
+    period: "2007 a 2009",
     title: "Pós-Graduação em Dermatologia",
     place: "Hospital da Gamboa, Rio de Janeiro, RJ",
   },
   {
-    period: "2009 — 2010",
+    period: "2009 a 2010",
     title: "Pós-Graduação em Medicina Estética",
     place: "Associação Internacional de Medicina Estética, RJ",
   },
@@ -84,7 +84,7 @@ export default function QuemSomosPage() {
                 em Medicina pela Universidade Gama Filho, no Rio de Janeiro, e se
                 especializar em Dermatologia pelo Hospital da Gamboa, percebeu que
                 a queda de cabelo era uma das queixas que mais impactava a
-                qualidade de vida dos pacientes — e uma das menos tratadas com
+                qualidade de vida dos pacientes, e uma das menos tratadas com
                 profundidade.
               </p>
               <p>
@@ -97,7 +97,7 @@ export default function QuemSomosPage() {
                 Por 10 anos, de 2012 a 2022, manteve consultório próprio em
                 Vitória (ES), onde consolidou protocolos clínicos para alopecia,
                 calvície masculina e feminina, e transplante capilar. Em 2024,
-                chegou a Salvador — e com ela, o mesmo padrão de excelência.
+                chegou a Salvador, e com ela o mesmo padrão de excelência.
               </p>
             </div>
           </div>

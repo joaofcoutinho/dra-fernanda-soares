@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <Image
               src="/logo-navy.png"
-              alt="Dra. Fernanda Soares — Dermatologia e Tricologia"
+              alt="Dra. Fernanda Soares, Dermatologia e Tricologia"
               width={358}
               height={170}
               className="h-24 w-auto sm:h-28"

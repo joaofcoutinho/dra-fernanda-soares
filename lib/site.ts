@@ -20,30 +20,42 @@ export const site = {
 export const clinicas = [
   {
     nome: "Cliderme",
-    cidade: "Salvador, BA",
-    endereco: "A confirmar",
-    telefone: "A confirmar",
-    whatsapp: "A confirmar",
-    horarios: "A confirmar — sugestão: sextas pela manhã",
-    mapsEmbed: "", // inserir URL de embed do Google Maps
+    cidade: "Itaigara, Salvador, BA",
+    endereco:
+      "Ed. Nobre do Parque, Av. Antônio Carlos Magalhães, 601, Itaigara, Salvador, BA, 41825-000",
+    telefone: "(71) 3044-1350",
+    whatsapp: "(71) 3044-1350",
+    horarios: "Seg. a sex., 08h às 19h · Sáb., 08h às 12h",
+    rating: "4,6",
+    reviews: "231",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=Av.+Antônio+Carlos+Magalhães,+601,+Itaigara,+Salvador+-+BA,+41825-000&z=16&output=embed",
   },
   {
-    nome: "Dermatomais",
-    cidade: "Salvador, BA",
-    endereco: "A confirmar",
-    telefone: "A confirmar",
-    whatsapp: "A confirmar",
-    horarios: "A confirmar",
-    mapsEmbed: "",
+    nome: "Dermato+",
+    cidade: "Pituba, Salvador, BA",
+    endereco:
+      "R. Alexandre Herculano, 42, Pituba, Salvador, BA, 41810-395",
+    telefone: "(71) 3044-1010",
+    whatsapp: "(71) 3044-1010",
+    horarios: "Seg. a sex., 08h às 18h",
+    rating: "4,8",
+    reviews: "141",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=R.+Alexandre+Herculano,+42,+Pituba,+Salvador+-+BA,+41810-395&z=16&output=embed",
   },
   {
     nome: "Santtare",
-    cidade: "Salvador, BA",
-    endereco: "A confirmar",
-    telefone: "A confirmar",
-    whatsapp: "A confirmar",
-    horarios: "A confirmar",
-    mapsEmbed: "",
+    cidade: "Pituba, Salvador, BA",
+    endereco:
+      "Edf. Itaigara Memorial II, R. Altino Serbeto de Barros, 241, 7º andar, Pituba, Salvador, BA, 41830-492",
+    telefone: "(71) 3350-6174",
+    whatsapp: "(71) 3350-6174",
+    horarios: "Seg. a sex., 08h às 17h",
+    rating: "4,9",
+    reviews: "230",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=R.+Altino+Serbeto+de+Barros,+241,+Pituba,+Salvador+-+BA,+41830-492&z=16&output=embed",
   },
 ];
 
