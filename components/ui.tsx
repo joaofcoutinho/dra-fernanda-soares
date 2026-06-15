@@ -87,11 +87,13 @@ export function PageHero({
   title,
   subtitle,
   image,
+  aside,
 }: {
   eyebrow: string;
   title: ReactNode;
   subtitle?: ReactNode;
   image?: string;
+  aside?: ReactNode;
 }) {
   return (
     <section className="surface-dark relative overflow-hidden">
@@ -115,15 +117,28 @@ export function PageHero({
           />
         </>
       )}
-      <div className="container-site relative pb-20 pt-44 sm:pb-24 sm:pt-52">
-        <p className="eyebrow animate-rise">{eyebrow}</p>
-        <h1 className="display mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl">
-          {title}
-        </h1>
-        {subtitle && (
-          <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-ivory/70 animate-rise">
-            {subtitle}
-          </p>
+      <div
+        className={`container-site relative pb-20 pt-44 sm:pb-24 sm:pt-52 ${
+          aside
+            ? "lg:grid lg:grid-cols-[1.3fr_0.7fr] lg:items-center lg:gap-14"
+            : ""
+        }`}
+      >
+        <div>
+          <p className="eyebrow animate-rise">{eyebrow}</p>
+          <h1 className="display mt-7 max-w-4xl text-[2.8rem] leading-[1.02] text-ivory animate-rise sm:text-6xl">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-ivory/70 animate-rise">
+              {subtitle}
+            </p>
+          )}
+        </div>
+        {aside && (
+          <div className="mt-12 animate-rise [animation-delay:140ms] lg:mt-0">
+            {aside}
+          </div>
         )}
       </div>
     </section>

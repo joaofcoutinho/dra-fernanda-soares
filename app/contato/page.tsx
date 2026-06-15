@@ -65,11 +65,14 @@ export default function ContatoPage() {
         eyebrow="Contato & Agendamento"
         title={
           <>
-            Agende sua consulta com a
-            <br /> <span className="italic text-gradient-light">Dra. Fernanda Soares</span>
+            Agende sua consulta com a{" "}
+            <span className="italic text-gradient-light">
+              Dra. Fernanda Soares
+            </span>
           </>
         }
         subtitle="Escolha a data e horário diretamente na agenda. Sem fila, sem espera."
+        aside={<CalendarWidget />}
       />
 
       {/* Widget Calendly */}
@@ -152,5 +155,21 @@ export default function ContatoPage() {
         </div>
       </section>
     </>
+  );
+}
+
+function CalendarWidget() {
+  return (
+    <div className="mx-auto flex w-full max-w-xs flex-col items-center gap-6 border border-ivory/15 bg-ivory/[0.05] px-8 py-12 text-center backdrop-blur-sm">
+      <span className="flex h-24 w-24 items-center justify-center rounded-full border border-champagne/40 bg-champagne/10 text-champagne">
+        <IconCalendar className="!h-10 !w-10" />
+      </span>
+      <div>
+        <p className="display text-2xl text-ivory">Agendamento online</p>
+        <p className="mt-2 text-[0.62rem] font-medium uppercase tracking-luxe text-champagne">
+          Data e horário em tempo real
+        </p>
+      </div>
+    </div>
   );
 }
