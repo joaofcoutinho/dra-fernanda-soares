@@ -121,15 +121,20 @@ export default function TratamentosDermatologicosPage() {
 
       <section className="section">
         <div className="container-site grid gap-16 lg:grid-cols-2 lg:items-center">
-          <SectionHeading
-            eyebrow="Como Funciona"
-            title={
-              <>
-                A consulta
-                <br /> dermatológica
-              </>
-            }
-          />
+          <div className="text-center lg:text-left">
+            <SectionHeading
+              eyebrow="Como Funciona"
+              title={
+                <>
+                  A consulta
+                  <br /> dermatológica
+                </>
+              }
+            />
+            <Link href="/contato" className="btn-primary mt-9">
+              Agendar minha avaliação
+            </Link>
+          </div>
           <div className="space-y-6 text-[1.05rem] font-light leading-relaxed text-ink-soft">
             <p>
               Toda consulta começa com avaliação clínica completa: anamnese, exame

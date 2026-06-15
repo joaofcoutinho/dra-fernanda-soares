@@ -83,6 +83,30 @@ const depoimentos = [
     name: "C. Almeida",
     treatment: "Consulta Dermatológica",
   },
+  {
+    quote:
+      "Sofria com queda de cabelo há anos e nenhum tratamento resolvia. A Dra. Fernanda investigou a causa de verdade e em poucos meses a diferença já era visível.",
+    name: "P. Carvalho",
+    treatment: "Mesoterapia Capilar",
+  },
+  {
+    quote:
+      "Atenciosa, técnica e honesta. Não empurra procedimento, indica o que realmente faz sentido. Resultado natural e um acompanhamento que faz toda a diferença.",
+    name: "J. Ribeiro",
+    treatment: "Bioestimulador de Colágeno",
+  },
+  {
+    quote:
+      "Profissional excepcional. Me senti acolhida desde a primeira consulta e o resultado do meu tratamento capilar foi exatamente o que eu esperava. Recomendo de olhos fechados.",
+    name: "A. Menezes",
+    treatment: "MMP Capilar",
+  },
+  {
+    quote:
+      "Consultório impecável e um atendimento que respeita o tempo do paciente. A Dra. Fernanda é referência em Salvador, e agora entendo o porquê.",
+    name: "L. Ferreira",
+    treatment: "Toxina Botulínica",
+  },
 ];
 
 const credenciais = [
@@ -407,12 +431,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Grade de depoimentos */}
-          <Reveal stagger className="mt-14 grid gap-6 lg:grid-cols-3">
-            {depoimentos.map((d) => (
-              <Testimonial key={`${d.name}-${d.treatment}`} {...d} />
-            ))}
-          </Reveal>
+          {/* Carrossel de depoimentos (rolagem automática) */}
+          <div className="marquee-mask relative mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+            <div className="marquee-track gap-6">
+              {[...depoimentos, ...depoimentos].map((d, i) => (
+                <div
+                  key={`${d.name}-${d.treatment}-${i}`}
+                  className="w-[300px] flex-none sm:w-[360px]"
+                  aria-hidden={i >= depoimentos.length}
+                >
+                  <Testimonial {...d} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
