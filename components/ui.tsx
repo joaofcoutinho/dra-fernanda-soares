@@ -67,16 +67,28 @@ export function SectionDivider({ className = "" }: { className?: string }) {
   );
 }
 
+const bandStats = [
+  { value: "20+", label: "Anos de experiência" },
+  { value: "3", label: "Clínicas de referência em Salvador" },
+  { value: "4,8★", label: "Avaliação média no Google" },
+];
+
 export function SectionBand() {
   return (
-    <div className="bg-navy py-6">
-      <div className="container-site flex items-center justify-center gap-5">
-        <span className="h-px w-20 bg-gradient-to-r from-transparent to-champagne/60 sm:w-36" />
-        <span
-          className="block h-2.5 w-2.5 rotate-45 bg-champagne"
-          aria-hidden
-        />
-        <span className="h-px w-20 bg-gradient-to-l from-transparent to-champagne/60 sm:w-36" />
+    <div className="bg-navy py-12 sm:py-14">
+      <div className="container-site">
+        <dl className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:gap-6 sm:divide-x sm:divide-ivory/10">
+          {bandStats.map((s) => (
+            <div key={s.label} className="px-4">
+              <dt className="display bg-gradient-to-br from-champagne-light via-champagne to-champagne-deep bg-clip-text text-4xl leading-none text-transparent sm:text-5xl">
+                {s.value}
+              </dt>
+              <dd className="mx-auto mt-3 max-w-[12rem] text-[0.72rem] font-medium uppercase leading-relaxed tracking-luxe text-ivory/70">
+                {s.label}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
