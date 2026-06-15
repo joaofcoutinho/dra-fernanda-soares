@@ -54,7 +54,7 @@ export default function QuemSomosPage() {
             Medicina de precisão para
             <br /> o que mais aparece:
             <br />
-            <span className="italic text-gradient-light">seu cabelo e sua pele.</span>
+            <span className="text-gradient-light">seu cabelo e sua pele.</span>
           </>
         }
         subtitle="Mais de 20 anos dedicados ao diagnóstico correto, ao tratamento eficaz e ao acompanhamento que transforma resultados em histórias reais."

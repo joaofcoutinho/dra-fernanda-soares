@@ -26,6 +26,7 @@ export const clinicas = [
     telefone: "(71) 3044-1350",
     whatsapp: "(71) 3044-1350",
     horarios: "Seg. a sex., 08h às 19h · Sáb., 08h às 12h",
+    horariosSchema: ["Mo-Fr 08:00-19:00", "Sa 08:00-12:00"],
     rating: "4,6",
     reviews: "231",
     mapsEmbed:
@@ -39,6 +40,7 @@ export const clinicas = [
     telefone: "(71) 3044-1010",
     whatsapp: "(71) 3044-1010",
     horarios: "Seg. a sex., 08h às 18h",
+    horariosSchema: ["Mo-Fr 08:00-18:00"],
     rating: "4,8",
     reviews: "141",
     mapsEmbed:
@@ -52,6 +54,7 @@ export const clinicas = [
     telefone: "(71) 3350-6174",
     whatsapp: "(71) 3350-6174",
     horarios: "Seg. a sex., 08h às 17h",
+    horariosSchema: ["Mo-Fr 08:00-17:00"],
     rating: "4,9",
     reviews: "230",
     mapsEmbed:

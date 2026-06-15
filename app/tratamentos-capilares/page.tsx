@@ -57,7 +57,7 @@ export default function TratamentosCapilaresPage() {
         title={
           <>
             Tratamentos Capilares
-            <br /> em <span className="italic text-gradient-light">Salvador</span>
+            <br /> em <span className="text-gradient-light">Salvador</span>
           </>
         }
         subtitle="Diagnóstico preciso. Protocolos individualizados. Resultados que você vê."
@@ -93,7 +93,7 @@ export default function TratamentosCapilaresPage() {
             <p className="eyebrow">Procedimento Principal</p>
             <h2 className="display mt-6 text-4xl leading-tight text-ivory sm:text-5xl">
               Transplante Capilar
-              <span className="mt-1 block italic text-gradient-light">
+              <span className="mt-1 block text-gradient-light">
                 natural e definitivo
               </span>
             </h2>

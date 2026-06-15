@@ -5,6 +5,11 @@ import { clinicas, navLinks, site } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-navy/10 bg-gradient-to-br from-ivory via-cream to-ivory text-ink">
+      {/* Fita de divisão no topo (igual à do header) */}
+      <span
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"
+        aria-hidden
+      />
       {/* Brilhos suaves (iguais à seção de Depoimentos) */}
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_12%_25%,_rgba(30,58,95,0.10),_transparent_60%)]"

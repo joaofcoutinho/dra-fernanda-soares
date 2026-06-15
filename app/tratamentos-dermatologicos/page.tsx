@@ -56,7 +56,7 @@ export default function TratamentosDermatologicosPage() {
         title={
           <>
             Procedimentos com resultado
-            <br /> natural e <span className="italic text-gradient-light">embasamento médico</span>
+            <br /> natural e <span className="text-gradient-light">embasamento médico</span>
           </>
         }
       />

@@ -66,7 +66,7 @@ export default function ContatoPage() {
         title={
           <>
             Agende sua consulta com a{" "}
-            <span className="italic text-gradient-light">
+            <span className="text-gradient-light">
               Dra. Fernanda Soares
             </span>
           </>

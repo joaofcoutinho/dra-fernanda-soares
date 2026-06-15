@@ -129,7 +129,7 @@ export default function HomePage() {
             </p>
             <h1 className="display mt-7 text-[2.6rem] leading-[1.04] text-ink sm:text-6xl lg:text-[4.6rem]">
               Especialista em{" "}
-              <span className="text-gradient italic">Saúde Capilar</span> em Salvador
+              <span className="text-gradient">Saúde Capilar</span> em Salvador
             </h1>
             <p className="mx-auto mt-8 max-w-md text-lg font-light leading-relaxed text-ink-soft lg:mx-0">
               Dermatologista e Tricologista, especialista em Transplante Capilar.
@@ -244,7 +244,7 @@ export default function HomePage() {
             {tratamentos.map((t) => (
               <article
                 key={t.title}
-                className="group relative flex min-h-[400px] flex-col justify-end overflow-hidden"
+                className="group relative flex min-h-[300px] flex-col justify-end overflow-hidden sm:min-h-[400px]"
               >
                 <Image
                   src={t.image}
@@ -347,7 +347,7 @@ export default function HomePage() {
             {diferenciais.map((d, i) => (
               <article
                 key={d.title}
-                className="group relative flex min-h-[420px] flex-col justify-end overflow-hidden"
+                className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden sm:min-h-[420px]"
               >
                 <Image
                   src={d.image}
@@ -455,7 +455,13 @@ export default function HomePage() {
                       <IconPin className="!h-[18px] !w-[18px]" />
                     </span>
                     <div className="flex-1 text-left">
-                      <h3 className="display text-xl text-ivory">{c.nome}</h3>
+                      <div className="flex items-center gap-2.5">
+                        <h3 className="display text-xl text-ivory">{c.nome}</h3>
+                        <span className="inline-flex items-center gap-1 text-[0.72rem] text-champagne">
+                          <span aria-hidden>★</span>
+                          {c.rating}
+                        </span>
+                      </div>
                       <p className="mt-0.5 text-[0.7rem] font-medium uppercase tracking-luxe text-ivory/55">
                         {c.cidade}
                       </p>

@@ -27,7 +27,7 @@ export default function LocalizacaoPage() {
         title={
           <>
             Onde encontrar a Dra. Fernanda
-            <br /> em <span className="italic text-gradient-light">Salvador</span>
+            <br /> em <span className="text-gradient-light">Salvador</span>
           </>
         }
         subtitle="Atendimento particular disponível em três clínicas. Escolha a mais próxima de você."
@@ -40,20 +40,16 @@ export default function LocalizacaoPage() {
               key={c.nome}
               className="flex flex-col border border-ink/10 bg-ivory transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-soft"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-cream">
-                {c.mapsEmbed ? (
-                  <iframe
-                    src={c.mapsEmbed}
-                    className="h-full w-full"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={`Mapa ${c.nome}`}
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center text-[0.7rem] font-medium uppercase tracking-luxe text-ink-soft/50">
-                    Mapa a inserir
-                  </div>
-                )}
+              <div className="relative aspect-[4/3] overflow-hidden bg-navy">
+                <iframe
+                  src={c.mapsEmbed}
+                  title={`Mapa, ${c.nome}`}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full grayscale-[0.2]"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                />
               </div>
               <div className="flex flex-1 flex-col p-9">
                 <h2 className="display text-3xl text-ink">{c.nome}</h2>
@@ -91,7 +87,7 @@ export default function LocalizacaoPage() {
         </Reveal>
       </section>
 
-      <section className="section bg-cream pt-0">
+      <section className="section bg-cream pt-16 sm:pt-20">
         <div className="container-site grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <SectionHeading
             eyebrow="Atendimento Particular"
