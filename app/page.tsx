@@ -160,7 +160,7 @@ export default function HomePage() {
               aria-hidden
             />
             <Image
-              src="/dra-fernanda-hero.png"
+              src="/dra-fernanda-tratada.png"
               alt="Dra. Fernanda Soares, dermatologista e tricologista em Salvador"
               width={800}
               height={1200}
