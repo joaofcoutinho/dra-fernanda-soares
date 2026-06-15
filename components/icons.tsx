@@ -83,6 +83,26 @@ export function IconCalendar({ className }: P) {
   );
 }
 
+/** WhatsApp — balão de conversa */
+export function IconWhatsApp({ className }: P) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1.4-5.1A8.5 8.5 0 1 1 21 11.5z" />
+      <path d="M8.8 8.4c-.2 0-.5.1-.7.4-.2.3-.7.8-.7 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.4 1.9.8 2.3.6 2.7.6.4 0 1.3-.5 1.5-1.1.2-.6.2-1 .1-1.1-.1-.1-.3-.2-.6-.3" />
+    </svg>
+  );
+}
+
+/** E-mail — envelope */
+export function IconMail({ className }: P) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="m3.5 7 8.5 5.5L20.5 7" />
+    </svg>
+  );
+}
+
 /** Localização — pin de mapa */
 export function IconPin({ className }: P) {
   return (

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -30,22 +31,16 @@ export default function Header() {
       />
 
       <div className="container-site grid h-20 grid-cols-[1fr_auto] items-center sm:h-24 xl:grid-cols-[1fr_auto_1fr]">
-        {/* Monograma + nome (esquerda) */}
-        <Link href="/" className="group flex items-center gap-2.5 justify-self-start">
-          <span
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/60 text-[0.8rem] font-medium text-gold transition-colors group-hover:bg-gold group-hover:text-navy"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            FS
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="display text-base font-semibold text-ivory sm:text-lg">
-              Dra. Fernanda Soares
-            </span>
-            <span className="mt-0.5 text-[0.54rem] font-medium uppercase tracking-luxe text-gold">
-              Dermatologia · Tricologia
-            </span>
-          </span>
+        {/* Logo (esquerda) */}
+        <Link href="/" className="justify-self-start">
+          <Image
+            src="/logo-white.png"
+            alt="Dra. Fernanda Soares — Dermatologia e Tricologia"
+            width={358}
+            height={170}
+            priority
+            className="h-16 w-auto sm:h-[4.75rem]"
+          />
         </Link>
 
         {/* Nav (centro) */}

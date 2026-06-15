@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { clinicas, navLinks, site } from "@/lib/site";
 
@@ -17,26 +18,16 @@ export default function Footer() {
         <div className="grid gap-12 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Marca */}
           <div>
-            <div className="flex items-center gap-3">
-              <span
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/60 text-gold"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                FS
-              </span>
-              <div>
-                <p className="display text-2xl text-ink">{site.doctor}</p>
-                <p className="mt-1 text-[0.62rem] font-medium uppercase tracking-luxe text-gold">
-                  Dermatologia · Tricologia
-                </p>
-              </div>
-            </div>
-            <p className="mt-7 max-w-xs text-sm font-light leading-relaxed text-ink-soft">
+            <Image
+              src="/logo-navy.png"
+              alt="Dra. Fernanda Soares — Dermatologia e Tricologia"
+              width={358}
+              height={170}
+              className="h-24 w-auto sm:h-28"
+            />
+            <p className="mt-6 max-w-xs text-sm font-light leading-relaxed text-ink-soft">
               Medicina de precisão para a saúde da pele e do cabelo. Atendimento
               particular exclusivo em {site.city}.
-            </p>
-            <p className="mt-6 text-[0.7rem] uppercase tracking-[0.16em] text-ink-soft">
-              {site.crm} · {site.rqe}
             </p>
           </div>
 

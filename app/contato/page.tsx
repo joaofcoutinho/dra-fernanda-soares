@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero, SectionHeading } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { IconCalendar, IconMail, IconWhatsApp } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Agendar Consulta | Dra. Fernanda Soares — Dermatologista Salvador",
@@ -34,21 +35,21 @@ const faq = [
 
 const cards = [
   {
-    icon: "✆",
+    icon: <IconWhatsApp />,
     title: "WhatsApp",
     text: "Prefere falar antes de agendar? Entre em contato direto.",
     label: "Falar pelo WhatsApp",
     href: site.whatsapp,
   },
   {
-    icon: "❋",
+    icon: <IconCalendar />,
     title: "Agenda Online",
     text: "Escolha data e horário disponível direto na agenda da Dra. Fernanda.",
     label: "Agendar agora",
     href: "#agendar",
   },
   {
-    icon: "✉",
+    icon: <IconMail />,
     title: "E-mail",
     text: "Para dúvidas ou solicitações que não sejam urgentes.",
     label: "Enviar mensagem",
@@ -106,14 +107,14 @@ export default function ContatoPage() {
               href={c.href}
               className="group flex flex-col bg-ivory p-10 text-center transition-colors duration-500 hover:bg-cream"
             >
-              <span className="display mx-auto text-4xl text-gold transition-transform duration-500 group-hover:scale-110">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-navy/15 bg-navy/[0.04] text-navy transition-all duration-500 group-hover:border-navy group-hover:bg-navy group-hover:text-ivory">
                 {c.icon}
               </span>
               <h3 className="display mt-5 text-2xl text-ink">{c.title}</h3>
               <p className="mt-3 flex-1 text-sm font-light leading-relaxed text-ink-soft">
                 {c.text}
               </p>
-              <span className="mt-7 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-gold">
+              <span className="mt-7 text-[0.72rem] font-medium uppercase tracking-[0.16em] text-navy">
                 {c.label} →
               </span>
             </a>

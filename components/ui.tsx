@@ -168,26 +168,15 @@ export function CTABanner({
   eyebrow?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-navy-deep to-ink-deep text-ivory">
-      {/* Brilho mauve sutil no topo */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_0%,_rgba(44,82,130,0.30),_transparent_60%)]"
-        aria-hidden
-      />
+    <section className="surface-dark relative overflow-hidden">
       {/* Faixa dourada na divisão (topo) */}
       <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center" aria-hidden>
-        <div className="h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div className="h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-champagne to-transparent" />
       </div>
 
-      <div className="container-site relative py-24 sm:py-32">
-        <div className="relative mx-auto max-w-3xl px-8 py-14 text-center sm:px-16 sm:py-16">
-          {/* Cantos dourados */}
-          <span className="absolute -left-px -top-px h-6 w-6 border-l-2 border-t-2 border-gold/60" aria-hidden />
-          <span className="absolute -right-px -top-px h-6 w-6 border-r-2 border-t-2 border-gold/60" aria-hidden />
-          <span className="absolute -bottom-px -left-px h-6 w-6 border-b-2 border-l-2 border-gold/60" aria-hidden />
-          <span className="absolute -bottom-px -right-px h-6 w-6 border-b-2 border-r-2 border-gold/60" aria-hidden />
-
-          <p className="eyebrow is-center justify-center !text-champagne">{eyebrow}</p>
+      <div className="container-site relative py-16 sm:py-20">
+        <div className="relative mx-auto max-w-3xl border border-ivory/15 bg-ivory/[0.03] px-8 py-12 text-center sm:px-16 sm:py-14">
+          <p className="eyebrow is-center justify-center">{eyebrow}</p>
           <h2 className="display mx-auto mt-6 max-w-2xl text-[2.2rem] leading-[1.1] text-ivory sm:text-[3rem]">
             {title}
           </h2>

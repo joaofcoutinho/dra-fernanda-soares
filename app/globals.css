@@ -239,3 +239,22 @@ body {
     transition: none;
   }
 }
+
+/* ---------- Acentos em seções escuras (fora de @layer p/ vencer utilities) ---------- */
+/* Eyebrows brancos + filete champanhe dentro de qualquer .surface-dark */
+.surface-dark .eyebrow {
+  color: #fbfaf4;
+}
+.surface-dark .eyebrow::before,
+.surface-dark .eyebrow::after {
+  background-color: #dec58f;
+}
+/* Acentos "gold" (que viraram navy) ficam champanhe sobre o escuro */
+.surface-dark .text-gold {
+  color: #dec58f;
+}
+.surface-dark .border-gold\/40,
+.surface-dark .border-gold\/60,
+.surface-dark .border-gold\/70 {
+  border-color: rgba(222, 197, 143, 0.5);
+}

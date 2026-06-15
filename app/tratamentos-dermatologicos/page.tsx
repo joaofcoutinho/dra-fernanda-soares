@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTABanner, PageHero, SectionHeading, TreatmentCard } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 
@@ -50,6 +51,7 @@ export default function TratamentosDermatologicosPage() {
   return (
     <>
       <PageHero
+        image="/hero-dermatologicos.jpg"
         eyebrow="Dermatologia Estética"
         title={
           <>
@@ -99,6 +101,19 @@ export default function TratamentosDermatologicosPage() {
                 indicado={p.indicado}
               />
             ))}
+            {/* Célula final — mini-CTA preenche a grade */}
+            <div className="flex flex-col items-center justify-center gap-5 bg-navy p-9 text-center">
+              <span className="display text-2xl leading-snug text-ivory">
+                Cada pele pede um protocolo próprio
+              </span>
+              <p className="text-sm font-light leading-relaxed text-ivory/70">
+                Nenhum procedimento sem avaliação clínica. Vamos definir o seu
+                plano juntos.
+              </p>
+              <Link href="/contato" className="btn-on-dark mt-1">
+                Agendar avaliação
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>

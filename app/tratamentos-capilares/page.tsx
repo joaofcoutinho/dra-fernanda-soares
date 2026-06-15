@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTABanner, PageHero, SectionHeading, TreatmentCard } from "@/components/ui";
+import { PageHero, SectionHeading, TreatmentCard } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function TratamentosCapilaresPage() {
   return (
     <>
       <PageHero
+        image="/hero-capilares.jpg"
         eyebrow="Tratamentos Capilares"
         title={
           <>
@@ -191,32 +192,27 @@ export default function TratamentosCapilaresPage() {
         </div>
       </section>
 
-      {/* Por onde começo */}
-      <section className="section pt-0">
-        <div className="container-site">
-          <div className="surface-dark relative overflow-hidden">
-            <div className="grain absolute inset-0" aria-hidden />
-            <div className="relative px-8 py-16 text-center sm:px-16 sm:py-20">
-              <p className="eyebrow is-center justify-center">Pergunta Frequente</p>
-              <h2 className="display mx-auto mt-6 max-w-2xl text-4xl leading-tight text-ivory sm:text-5xl">
-                Por onde começo?
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl font-light leading-relaxed text-ivory/70">
-                Pela consulta. Sem avaliação, não existe protocolo correto — e sem
-                protocolo correto, qualquer tratamento é tentativa. A Dra. Fernanda
-                investiga a causa raiz da sua queda antes de propor qualquer
-                intervenção. É isso que diferencia um resultado consistente de um
-                tratamento que não vai a lugar nenhum.
-              </p>
-              <Link href="/contato" className="btn-gold mt-10">
-                Agendar minha consulta capilar
-              </Link>
-            </div>
+      {/* Por onde começo (seção navy com profundidade) */}
+      <section className="surface-dark section relative overflow-hidden">
+        <div className="container-site relative">
+          <div className="relative mx-auto max-w-3xl border border-ivory/15 bg-ivory/[0.03] px-8 py-12 text-center sm:px-16 sm:py-14">
+            <p className="eyebrow is-center justify-center">Pergunta Frequente</p>
+            <h2 className="display mx-auto mt-6 max-w-2xl text-4xl leading-tight text-ivory sm:text-5xl">
+              Por onde começo?
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl font-light leading-relaxed text-ivory/70">
+              Pela consulta. Sem avaliação, não existe protocolo correto — e sem
+              protocolo correto, qualquer tratamento é tentativa. A Dra. Fernanda
+              investiga a causa raiz da sua queda antes de propor qualquer
+              intervenção. É isso que diferencia um resultado consistente de um
+              tratamento que não vai a lugar nenhum.
+            </p>
+            <Link href="/contato" className="btn-gold mt-10">
+              Agendar minha consulta capilar
+            </Link>
           </div>
         </div>
       </section>
-
-      <CTABanner title="Diagnóstico preciso é o primeiro passo para o resultado." />
     </>
   );
 }
