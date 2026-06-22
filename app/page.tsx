@@ -460,13 +460,7 @@ export default function HomePage() {
                       <IconPin className="!h-[18px] !w-[18px]" />
                     </span>
                     <div className="flex-1 text-left">
-                      <div className="flex items-center gap-2.5">
-                        <h3 className="display text-xl text-ivory">{c.nome}</h3>
-                        <span className="inline-flex items-center gap-1 text-[0.72rem] text-champagne">
-                          <span aria-hidden>★</span>
-                          {c.rating}
-                        </span>
-                      </div>
+                      <h3 className="display text-xl text-ivory">{c.nome}</h3>
                       <p className="mt-0.5 text-[0.7rem] font-medium uppercase tracking-luxe text-ivory/55">
                         {c.cidade}
                       </p>

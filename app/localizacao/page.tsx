@@ -54,17 +54,6 @@ export default function LocalizacaoPage() {
               <div className="flex flex-1 flex-col p-9">
                 <h2 className="display text-3xl text-ink">{c.nome}</h2>
 
-                {/* Avaliação Google */}
-                <div className="mt-2 flex items-center gap-2 text-sm">
-                  <span className="inline-flex gap-0.5 text-champagne" aria-hidden>
-                    ★★★★★
-                  </span>
-                  <span className="font-medium text-ink">{c.rating}</span>
-                  <span className="text-xs text-ink-soft">
-                    · {c.reviews} avaliações no Google
-                  </span>
-                </div>
-
                 <dl className="mt-6 space-y-4 text-sm font-light text-ink-soft">
                   <Row label="Endereço" value={c.endereco} />
                   <Row label="Telefone" value={c.telefone} />
