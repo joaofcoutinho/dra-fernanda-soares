@@ -14,36 +14,62 @@ const procedimentos = [
     title: "Toxina Botulínica",
     description:
       "Aplicada em pontos estratégicos para relaxamento muscular localizado, suavizando linhas de expressão sem perda de mobilidade facial. Técnica conservadora, com mapeamento individualizado: expressão preservada, aparência mais descansada e natural.",
-    indicado:
-      "Linhas de expressão (glabela, testa, pés-de-galinha), bruxismo, hiperidrose axilar, elevação de sobrancelha.",
+    indicado: [
+      "Linhas de expressão (glabela, testa, pés-de-galinha)",
+      "Bruxismo",
+      "Hiperidrose axilar",
+      "Elevação de sobrancelha",
+    ],
   },
   {
     title: "Preenchimento Facial",
     description:
       "Ácido hialurônico restaura volume perdido e redefine contornos faciais de forma progressiva e reversível. Produto, viscosidade e técnica escolhidos com base na anatomia de cada paciente. O objetivo é naturalidade, nunca exagero.",
-    indicado:
-      "Sulcos nasogenianos, bigode chinês, projeção de queixo, hidratação profunda (skinboosters), lábios, maçãs do rosto.",
+    indicado: [
+      "Sulcos nasogenianos",
+      "Bigode chinês",
+      "Projeção de queixo",
+      "Hidratação profunda (skinboosters)",
+      "Lábios",
+      "Maçãs do rosto",
+    ],
   },
   {
     title: "Bioestimulador de Colágeno",
     description:
       "Sculptra, Radiesse, Ellansé e outros estimulam a produção natural de colágeno, com melhora progressiva da firmeza cutânea ao longo de meses. Ao contrário dos preenchedores imediatos, o resultado é construído gradualmente.",
-    indicado:
-      "Flacidez facial e corporal, perda de volume generalizada, envelhecimento cutâneo, melhora de textura e firmeza.",
+    indicado: [
+      "Flacidez facial e corporal",
+      "Perda de volume generalizada",
+      "Envelhecimento cutâneo",
+      "Melhora de textura e firmeza",
+    ],
   },
   {
     title: "Peeling Químico",
     description:
       "Promove descamação controlada da pele, estimulando renovação celular e produção de colágeno. A profundidade (superficial, médio ou profundo) é definida conforme o objetivo e o tipo de pele de cada paciente.",
-    indicado:
-      "Manchas (melasma, hiperpigmentações), acne e cicatrizes, envelhecimento cutâneo, textura irregular, oleosidade.",
+    indicado: [
+      "Manchas (melasma, hiperpigmentações)",
+      "Acne e cicatrizes",
+      "Envelhecimento cutâneo",
+      "Textura irregular",
+      "Oleosidade",
+    ],
   },
   {
-    title: "Laser CO2 Fracionado",
+    title: "Laser CO₂ Fracionado",
     description:
-      "Um dos procedimentos mais eficazes para remodelação da pele. Cria microcanais controlados que estimulam regeneração cutânea profunda, com melhora de textura, firmeza, cicatrizes e manchas. Realizado em clínica com protocolo de anestesia e pós-cuidado.",
-    indicado:
-      "Cicatrizes de acne, estrias, rugas profundas, flacidez, manchas resistentes, melhora geral da pele.",
+      "O Laser CO₂ Fracionado é um dos tratamentos mais eficazes para o rejuvenescimento e a remodelação da pele. A tecnologia promove microlesões controladas que estimulam intensamente a produção de colágeno e a renovação celular, proporcionando melhora progressiva da textura, firmeza e qualidade da pele. O procedimento é realizado em ambiente clínico, com protocolo individualizado de anestesia e orientações específicas para o período de recuperação, garantindo mais conforto e segurança ao paciente.",
+    indicado: [
+      "Cicatrizes de acne",
+      "Rugas e linhas de expressão",
+      "Flacidez cutânea",
+      "Estrias",
+      "Manchas resistentes",
+      "Poros dilatados",
+      "Rejuvenescimento global da pele",
+    ],
   },
 ];
 

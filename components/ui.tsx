@@ -242,7 +242,7 @@ export function TreatmentCard({
 }: {
   title: string;
   description: string;
-  indicado?: string;
+  indicado?: string | string[];
   index?: number;
   icon?: ReactNode;
   children?: ReactNode;
@@ -262,17 +262,29 @@ export function TreatmentCard({
       )}
       <h3 className="display text-2xl leading-snug text-ink">{title}</h3>
       <div className="mt-4 h-px w-10 bg-gold/50 transition-all duration-500 group-hover:w-16" />
-      <p className="mt-5 text-[0.95rem] font-light leading-relaxed text-ink-soft">
+      <p className="mt-5 text-[0.95rem] font-normal leading-relaxed text-ink-soft">
         {description}
       </p>
       {indicado && (
-        <p className="mt-6 border-t border-ink/10 pt-5 text-[0.85rem] font-light leading-relaxed text-ink-soft">
-          <span className="font-medium uppercase tracking-wider text-gold">
+        <div className="mt-6 border-t border-ink/10 pt-5 text-[0.85rem] font-normal leading-relaxed text-ink-soft">
+          <span className="font-semibold uppercase tracking-wider text-gold">
             Indicado para
           </span>
-          <br />
-          {indicado}
-        </p>
+          {Array.isArray(indicado) ? (
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {indicado.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-gold/30 bg-gold/[0.06] px-3 py-1 text-[0.72rem] font-medium leading-snug text-ink"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-1">{indicado}</p>
+          )}
+        </div>
       )}
       {children}
     </div>

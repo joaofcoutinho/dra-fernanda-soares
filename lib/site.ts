@@ -19,7 +19,7 @@ export const site = {
 
 export const clinicas = [
   {
-    nome: "Cliderme",
+    nome: "Clínica Cliderme",
     cidade: "Itaigara, Salvador, BA",
     endereco:
       "Ed. Nobre do Parque, Av. Antônio Carlos Magalhães, 601, Itaigara, Salvador, BA, 41825-000",
@@ -33,7 +33,7 @@ export const clinicas = [
       "https://maps.google.com/maps?q=Av.+Antônio+Carlos+Magalhães,+601,+Itaigara,+Salvador+-+BA,+41825-000&z=16&output=embed",
   },
   {
-    nome: "Dermato+",
+    nome: "Clínica Dermato+",
     cidade: "Pituba, Salvador, BA",
     endereco:
       "R. Alexandre Herculano, 42, Pituba, Salvador, BA, 41810-395",
@@ -47,7 +47,7 @@ export const clinicas = [
       "https://maps.google.com/maps?q=R.+Alexandre+Herculano,+42,+Pituba,+Salvador+-+BA,+41810-395&z=16&output=embed",
   },
   {
-    nome: "Santtare",
+    nome: "Clínica Santtare",
     cidade: "Pituba, Salvador, BA",
     endereco:
       "Edf. Itaigara Memorial II, R. Altino Serbeto de Barros, 241, 7º andar, Pituba, Salvador, BA, 41830-492",

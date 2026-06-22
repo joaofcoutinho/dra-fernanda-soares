@@ -11,33 +11,63 @@ export const metadata: Metadata = {
 
 const tratamentos = [
   {
-    title: "MMP Capilar",
+    title: "MMP Capilar (Microinfusão de Medicamentos na Pele)",
     description:
-      "Microimplante de alta precisão que utiliza microimplantes do próprio paciente. Indicado para casos com densidade reduzida em áreas específicas e pode ser combinado com outros protocolos. Um dos procedimentos de maior domínio técnico da Dra. Fernanda.",
-    indicado:
-      "Alopecia focal, complementação de transplante anterior, reconstrução de regiões com baixa densidade.",
+      "O MMP Capilar é um procedimento realizado com um dispositivo de microagulhas que promove a aplicação de ativos diretamente no couro cabeludo. As microperfurações facilitam a entrega dos medicamentos na região dos folículos pilosos, potencializando o tratamento da queda capilar e estimulando o crescimento dos fios.",
+    indicado: [
+      "Alopecia androgenética (calvície masculina e feminina)",
+      "Eflúvio telógeno (queda capilar intensa)",
+      "Afinamento e miniaturização dos fios",
+      "Alopecia areata (em casos selecionados)",
+      "Complemento ao tratamento após transplante capilar, quando indicado",
+      "Manutenção da saúde do couro cabeludo e estímulo ao crescimento dos fios",
+    ],
   },
   {
     title: "Mesoterapia Capilar",
     description:
-      "Tratamento injetável que leva ao couro cabeludo uma combinação personalizada de ativos: vitaminas, minerais, fatores de crescimento e medicamentos específicos. Cada cocktail é montado com base na causa da queda identificada em consulta.",
-    indicado:
-      "Eflúvio telógeno (queda difusa), alopecia androgênica inicial/moderada, manutenção pós-transplante, queda pós-parto ou hormonal.",
+      "A Mesoterapia Capilar é um tratamento minimamente invasivo que consiste na aplicação de medicamentos, vitaminas, aminoácidos e outros ativos diretamente no couro cabeludo por meio de pequenas injeções. O objetivo é estimular os folículos pilosos, melhorar a saúde do couro cabeludo e auxiliar no controle da queda e no fortalecimento dos fios.",
+    indicado: [
+      "Alopecia androgenética (calvície masculina e feminina)",
+      "Eflúvio telógeno (queda capilar intensa)",
+      "Afinamento e enfraquecimento dos fios",
+      "Queda capilar por deficiência nutricional (como terapia complementar)",
+      "Manutenção dos resultados após transplante capilar",
+      "Tratamento complementar em outras formas de alopecia, quando indicado pelo dermatologista",
+    ],
   },
   {
-    title: "Microenxerto Autólogo",
+    title: "Terapia Regenerativa Capilar — Microenxerto Autólogo (Microlyzer)",
     description:
-      "Técnica de transplante de menor escala, indicada para restauração de regiões específicas com perda capilar delimitada. Utiliza folículos do próprio paciente, garantindo compatibilidade total e resultado natural.",
-    indicado:
-      "Rarefação nas têmporas, linha frontal irregular, alopecia focal por tração, complementação estética de regiões específicas.",
+      "O Microlyzer é uma terapia regenerativa que utiliza microenxertos autólogos, ou seja, pequenas amostras do próprio couro cabeludo do paciente são coletadas e processadas para obtenção de uma suspensão rica em células e fatores regenerativos. Esse material é aplicado nas áreas afetadas pela queda capilar, com o objetivo de estimular a regeneração do folículo piloso, melhorar a qualidade dos fios e favorecer o crescimento capilar.",
+    indicado: [
+      "Alopecia androgenética (calvície masculina e feminina)",
+      "Afinamento e enfraquecimento progressivo dos fios",
+      "Queda capilar crônica",
+      "Complemento ao tratamento clínico da alopecia",
+      "Potencialização dos resultados após o transplante capilar, favorecendo a recuperação e a qualidade dos fios",
+      "Pacientes que buscam terapias regenerativas utilizando material do próprio organismo",
+    ],
   },
 ];
 
 const suporte = [
-  ["Laser de Baixa Intensidade (LLLT)", "Estimulação não invasiva do crescimento capilar."],
-  ["Microagulhamento Capilar", "Indução de fatores de crescimento no couro cabeludo."],
-  ["Terapia Tópica Personalizada", "Prescrição de compostos manipulados específicos."],
-  ["Suplementação Nutricional", "Orientação para deficiências que comprometem o crescimento."],
+  [
+    "LED Terapia Capellux",
+    "A LED Terapia Capellux é um tratamento não invasivo que utiliza luz de baixa intensidade (fotobiomodulação) para estimular a atividade dos folículos capilares. A energia luminosa atua nas células do couro cabeludo, favorecendo o metabolismo celular, melhorando a circulação local e prolongando a fase de crescimento dos fios (anágena).",
+  ],
+  [
+    "Terapia Oral Personalizada",
+    "A Terapia Oral Personalizada consiste na prescrição individualizada de medicamentos e suplementos (vitaminas e minerais) para o tratamento da queda capilar, de acordo com o diagnóstico, a causa da alopecia e as necessidades de cada paciente.",
+  ],
+  [
+    "Terapia Tópica Personalizada",
+    "A Terapia Tópica Personalizada consiste na prescrição de fórmulas de uso local desenvolvidas de acordo com o diagnóstico e as necessidades de cada paciente. O tratamento é elaborado para atuar diretamente no couro cabeludo e nos folículos capilares, auxiliando no controle da queda, estimulando o crescimento dos fios e melhorando a saúde do couro cabeludo.",
+  ],
+  [
+    "Suplementação Nutricional",
+    "Orientação para deficiências nutricionais que comprometem o crescimento e a saúde dos fios.",
+  ],
 ];
 
 const transplanteEtapas = [
